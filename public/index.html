@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0f14" />
+  <title>StemDeck — Live stem playback for the stage</title>
+  <meta name="description" content="StemDeck is a macOS app for performing live with multitrack stems. Per-channel routing, browser-based phone remote, sample-accurate sync, and a real mix at FOH." />
+  <meta property="og:title" content="StemDeck — Live stem playback for the stage" />
+  <meta property="og:description" content="Per-channel stem routing, browser-based remote, sample-accurate sync. Built for working musicians." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper:   '#0a0f14',
+            panel:   '#161c24',
+            panel2:  '#1f2832',
+            ink:     '#f5f7fa',
+            soft:    '#c5cdd6',
+            muted:   '#6b7681',
+            accent:  '#06b6d4',
+            grass:   '#22c55e',
+            sun:     '#eab308',
+            danger:  '#ef4444',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="bg-paper text-ink font-sans antialiased">
+
+  <!-- ============ NAV ============ -->
+  <nav class="sticky top-0 z-40 border-b border-white/5 bg-paper/80 backdrop-blur-sm">
+    <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 font-bold tracking-widest text-accent">STEMDECK</a>
+      <div class="flex items-center gap-6 text-sm text-soft">
+        <a href="#features" class="hover:text-ink hidden sm:inline">Features</a>
+        <a href="#pricing"  class="hover:text-ink hidden sm:inline">Pricing</a>
+        <a href="#"
+           class="rounded-md bg-accent text-paper font-semibold px-4 py-2 hover:opacity-90 transition">
+          Get StemDeck
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-accent/10 via-transparent to-transparent pointer-events-none"></div>
+    <div class="mx-auto max-w-6xl px-6 pt-20 pb-24 text-center relative">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-panel text-xs uppercase tracking-widest text-soft mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-grass animate-pulse"></span>
+        Now on the Mac App Store
+      </div>
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-tight">
+        Live stem playback,<br />
+        <span class="text-accent">built for the stage.</span>
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl text-soft max-w-2xl mx-auto">
+        Send every stem to its own channel on a real mixing console.
+        Run setlists, click tracks, and vamp loops without a laptop op.
+        Any phone on Wi&#8209;Fi becomes the remote.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="#"
+           class="rounded-md bg-accent text-paper font-semibold px-6 py-3 hover:opacity-90 transition">
+          Start 7-day free trial
+        </a>
+        <a href="#features"
+           class="rounded-md border border-white/10 px-6 py-3 hover:bg-panel transition">
+          See how it works
+        </a>
+      </div>
+      <p class="mt-4 text-xs text-muted">macOS 14 or later · One-time signup, billed monthly or yearly</p>
+
+      <!-- Hero artwork placeholder. Drop a real screenshot into images/hero.png to replace. -->
+      <div class="mt-16 mx-auto max-w-4xl">
+        <div class="rounded-2xl border border-white/10 bg-panel shadow-2xl overflow-hidden aspect-video">
+          <img src="/images/hero.png"
+               alt="StemDeck running a live show — multi-channel mixer view"
+               class="w-full h-full object-cover"
+               onerror="this.style.display='none';this.parentElement.classList.add('flex','items-center','justify-center');this.parentElement.innerHTML='<span class=\'text-muted text-sm\'>screenshot placeholder · drop images/hero.png</span>'" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section id="features" class="border-t border-white/5">
+    <div class="mx-auto max-w-6xl px-6 py-24">
+      <div class="text-center mb-16">
+        <p class="text-accent text-xs font-bold uppercase tracking-widest mb-4">What it does</p>
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">Everything you need on stage.<br />Nothing you don't.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="rounded-xl bg-panel border border-white/5 p-7">
+          <div class="text-accent text-2xl mb-4">⚡</div>
+          <h3 class="text-lg font-semibold mb-2">Per-channel routing</h3>
+          <p class="text-sm text-soft leading-relaxed">
+            Send each stem to its own physical output on interfaces with up to 32 channels.
+            Tested with the Soundcraft Ui24R. FOH gets a real mix, not a stereo bounce.
+          </p>
+        </div>
+
+        <div class="rounded-xl bg-panel border border-white/5 p-7">
+          <div class="text-accent text-2xl mb-4">📡</div>
+          <h3 class="text-lg font-semibold mb-2">Browser-based remote</h3>
+          <p class="text-sm text-soft leading-relaxed">
+            Phones, tablets, laptops — anyone on the same Wi&#8209;Fi opens a URL,
+            scans a QR, and gets a live transport. No app install, no extra software.
+          </p>
+        </div>
+
+        <div class="rounded-xl bg-panel border border-white/5 p-7">
+          <div class="text-accent text-2xl mb-4">🎯</div>
+          <h3 class="text-lg font-semibold mb-2">Sample-accurate sync</h3>
+          <p class="text-sm text-soft leading-relaxed">
+            One audio engine, one clock. Every stem starts together and stays locked
+            for the length of the song. No drift, no per-track compensation.
+          </p>
+        </div>
+
+        <div class="rounded-xl bg-panel border border-white/5 p-7">
+          <div class="text-accent text-2xl mb-4">🥁</div>
+          <h3 class="text-lg font-semibold mb-2">Click tracks &amp; lead-ins</h3>
+          <p class="text-sm text-soft leading-relaxed">
+            Two-point BPM calculator from any two downbeats.
+            Generates a click track with configurable count-in measures.
+            Routed to its own channel for in-ear feeds.
+          </p>
+        </div>
+
+        <div class="rounded-xl bg-panel border border-white/5 p-7">
+          <div class="text-accent text-2xl mb-4">🔁</div>
+          <h3 class="text-lg font-semibold mb-2">Vamp / loop sections</h3>
+          <p class="text-sm text-soft leading-relaxed">
+            Mark a region. Loop it indefinitely. Release with one tap and the song
+            picks up where the band left off — no manual re-cue.
+          </p>
+        </div>
+
+        <div class="rounded-xl bg-panel border border-white/5 p-7">
+          <div class="text-accent text-2xl mb-4">🎚️</div>
+          <h3 class="text-lg font-semibold mb-2">Pitch &amp; tempo per song</h3>
+          <p class="text-sm text-soft leading-relaxed">
+            Transpose ±12 semitones. Tempo from 0.5× to 2×. Click and count-in
+            stems automatically bypass pitch but follow tempo.
+          </p>
+        </div>
+
+        <div class="rounded-xl bg-panel border border-white/5 p-7">
+          <div class="text-accent text-2xl mb-4">📜</div>
+          <h3 class="text-lg font-semibold mb-2">Auto-cued setlists</h3>
+          <p class="text-sm text-soft leading-relaxed">
+            When one song ends, the next loads automatically. Hit GO when you're
+            ready. The band sees what's coming, the operator doesn't have to scramble.
+          </p>
+        </div>
+
+        <div class="rounded-xl bg-panel border border-white/5 p-7">
+          <div class="text-accent text-2xl mb-4">💾</div>
+          <h3 class="text-lg font-semibold mb-2">Mix export</h3>
+          <p class="text-sm text-soft leading-relaxed">
+            Render a stereo mix for band rehearsal — sample-identical to live playback.
+            What they hear in their cans is what they hear at the gig.
+          </p>
+        </div>
+
+        <div class="rounded-xl bg-panel border border-white/5 p-7">
+          <div class="text-accent text-2xl mb-4">🎹</div>
+          <h3 class="text-lg font-semibold mb-2">MIDI control</h3>
+          <p class="text-sm text-soft leading-relaxed">
+            Drive transport from any MIDI controller — foot switch, pad, keyboard.
+            CC mappings are configurable per show.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARISON ============ -->
+  <section class="border-t border-white/5 bg-panel/30">
+    <div class="mx-auto max-w-4xl px-6 py-20">
+      <div class="text-center mb-12">
+        <p class="text-accent text-xs font-bold uppercase tracking-widest mb-4">How we stack up</p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Pro audio without the pro audio price tag.</h2>
+      </div>
+      <div class="rounded-xl border border-white/10 overflow-hidden">
+        <table class="w-full text-sm">
+          <thead class="bg-panel2 text-xs uppercase tracking-wider text-muted">
+            <tr>
+              <th class="text-left px-5 py-4">Feature</th>
+              <th class="text-center px-5 py-4">StemDeck</th>
+              <th class="text-center px-5 py-4">QLab Pro Audio</th>
+              <th class="text-center px-5 py-4">MainStage</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5 text-soft">
+            <tr><td class="px-5 py-3">Multi-channel stem routing</td>     <td class="text-center text-grass">✓</td><td class="text-center text-grass">✓</td><td class="text-center text-muted">—</td></tr>
+            <tr><td class="px-5 py-3">Browser-based remote</td>            <td class="text-center text-grass">✓</td><td class="text-center text-muted">iOS only</td><td class="text-center text-muted">—</td></tr>
+            <tr><td class="px-5 py-3">Generated click tracks</td>          <td class="text-center text-grass">✓</td><td class="text-center text-muted">—</td><td class="text-center text-muted">—</td></tr>
+            <tr><td class="px-5 py-3">Auto-cued setlists</td>              <td class="text-center text-grass">✓</td><td class="text-center text-grass">✓</td><td class="text-center text-grass">✓</td></tr>
+            <tr><td class="px-5 py-3">Vamp loops with one-tap release</td> <td class="text-center text-grass">✓</td><td class="text-center text-muted">manual</td><td class="text-center text-muted">manual</td></tr>
+            <tr class="bg-panel2"><td class="px-5 py-4 font-semibold">Annual price</td><td class="text-center text-accent font-semibold">$129.99</td><td class="text-center">$299</td><td class="text-center">$29.99 (one-time)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-xs text-muted text-center">Pricing accurate as of 2026. Comparison is for the closest equivalent feature set, not a comprehensive review.</p>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section id="pricing" class="border-t border-white/5">
+    <div class="mx-auto max-w-4xl px-6 py-24">
+      <div class="text-center mb-12">
+        <p class="text-accent text-xs font-bold uppercase tracking-widest mb-4">Pricing</p>
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">One subscription. All features.</h2>
+        <p class="mt-4 text-soft">7-day free trial — no charge until you decide.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="rounded-2xl border border-white/10 bg-panel p-8">
+          <h3 class="text-xs uppercase tracking-widest text-muted mb-3">Monthly</h3>
+          <div class="flex items-baseline gap-1 mb-1">
+            <span class="text-5xl font-bold">$12.99</span>
+            <span class="text-soft">/ mo</span>
+          </div>
+          <p class="text-sm text-muted mb-6">Billed monthly. Cancel anytime.</p>
+          <ul class="space-y-2 text-sm text-soft">
+            <li class="flex gap-2"><span class="text-grass">✓</span> All features unlocked</li>
+            <li class="flex gap-2"><span class="text-grass">✓</span> Unlimited setlists &amp; songs</li>
+            <li class="flex gap-2"><span class="text-grass">✓</span> Free updates while subscribed</li>
+            <li class="flex gap-2"><span class="text-grass">✓</span> 7-day free trial</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border-2 border-accent bg-panel p-8 relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-paper text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full">
+            Save 17%
+          </div>
+          <h3 class="text-xs uppercase tracking-widest text-accent mb-3">Annual</h3>
+          <div class="flex items-baseline gap-1 mb-1">
+            <span class="text-5xl font-bold">$129.99</span>
+            <span class="text-soft">/ yr</span>
+          </div>
+          <p class="text-sm text-muted mb-6">Equivalent to $10.83/mo. Two months free.</p>
+          <ul class="space-y-2 text-sm text-soft">
+            <li class="flex gap-2"><span class="text-grass">✓</span> Everything in Monthly</li>
+            <li class="flex gap-2"><span class="text-grass">✓</span> Better cost per gig</li>
+            <li class="flex gap-2"><span class="text-grass">✓</span> 7-day free trial</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="mt-8 text-xs text-muted text-center max-w-2xl mx-auto leading-relaxed">
+        Subscription auto-renews unless cancelled at least 24 hours before the end of the current period.
+        Manage or cancel at any time in macOS&nbsp;System&nbsp;Settings&nbsp;→&nbsp;Apple&nbsp;ID&nbsp;→&nbsp;Subscriptions.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="border-t border-white/5">
+    <div class="mx-auto max-w-3xl px-6 py-24 text-center">
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">Ready for your next show?</h2>
+      <p class="mt-6 text-soft">Download from the Mac App Store. First seven days are on us.</p>
+      <a href="#" class="inline-block mt-10 rounded-md bg-accent text-paper font-semibold px-8 py-4 hover:opacity-90 transition">
+        Get StemDeck on the Mac App Store
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-white/5 bg-paper">
+    <div class="mx-auto max-w-6xl px-6 py-12 grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-sm">
+      <div>
+        <div class="font-bold tracking-widest text-accent mb-3">STEMDECK</div>
+        <p class="text-muted leading-relaxed">Live stem playback for working musicians. Built and maintained by Edipko Inc.</p>
+      </div>
+      <div>
+        <div class="text-xs uppercase tracking-widest text-muted mb-3">Product</div>
+        <ul class="space-y-2">
+          <li><a href="#features"  class="text-soft hover:text-ink">Features</a></li>
+          <li><a href="#pricing"   class="text-soft hover:text-ink">Pricing</a></li>
+          <li><a href="https://github.com/edipko/stemdeck" class="text-soft hover:text-ink">GitHub</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-xs uppercase tracking-widest text-muted mb-3">Legal</div>
+        <ul class="space-y-2">
+          <li><a href="/privacy.html" class="text-soft hover:text-ink">Privacy policy</a></li>
+          <li><a href="/terms.html"   class="text-soft hover:text-ink">Terms of use</a></li>
+          <li><a href="mailto:support@edipkoinc.com" class="text-soft hover:text-ink">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/5">
+      <div class="mx-auto max-w-6xl px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted">
+        <span>© 2026 Edipko Inc. All rights reserved.</span>
+        <span>Made for musicians, on stage.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

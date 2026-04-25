@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0f14" />
+  <title>Privacy Policy — StemDeck</title>
+  <meta name="description" content="StemDeck Privacy Policy. We collect almost nothing — by design." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: {
+      paper:'#0a0f14', panel:'#161c24', ink:'#f5f7fa', soft:'#c5cdd6', muted:'#6b7681', accent:'#06b6d4'
+    }, fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } } };
+  </script>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="bg-paper text-ink font-sans antialiased">
+  <nav class="sticky top-0 z-40 border-b border-white/5 bg-paper/80 backdrop-blur-sm">
+    <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+      <a href="/" class="font-bold tracking-widest text-accent">STEMDECK</a>
+      <a href="/" class="text-sm text-soft hover:text-ink">← Back to site</a>
+    </div>
+  </nav>
+
+  <main class="mx-auto max-w-3xl px-6 py-16 text-soft prose-stemdeck">
+    <h1 class="text-4xl font-bold text-ink tracking-tight">Privacy Policy</h1>
+    <p class="text-muted text-sm mt-2">Last updated: 25 April 2026</p>
+
+    <p class="mt-8 leading-relaxed">
+      StemDeck is a macOS application for live stem playback, published by Edipko Inc.
+      This Privacy Policy explains what information StemDeck does and does not collect, how we
+      handle the limited information we do receive, and the rights you have over it.
+    </p>
+    <p class="leading-relaxed">
+      Plain summary first: <strong class="text-ink">StemDeck collects almost nothing about you.</strong>
+      Your stems, songs, setlists, and configuration live on your Mac. We do not track usage, we
+      do not run analytics, we do not embed third-party SDKs, and we do not transmit the contents
+      of your library anywhere. The detailed disclosures below explain the few exceptions.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink mt-12 mb-4">1. Information you give us</h2>
+    <p class="leading-relaxed">
+      StemDeck does not require you to create an account with Edipko Inc. The only identity
+      relationship between you and StemDeck is your Apple ID, which is managed entirely by Apple
+      under <a class="text-accent hover:underline" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.
+      We never see your Apple ID, your payment method, or your billing details — Apple handles all of that for App Store purchases and subscriptions.
+    </p>
+    <p class="leading-relaxed">
+      If you contact our support team by email, we receive whatever you choose to send (typically
+      your email address and your description of the issue). We use that solely to reply to you and
+      delete the thread once the issue is resolved.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink mt-12 mb-4">2. Information StemDeck stores on your Mac</h2>
+    <p class="leading-relaxed">
+      The app stores all of its data locally in your user Application Support folder
+      (<code class="bg-panel px-1.5 py-0.5 rounded text-sm">~/Library/Application Support/StemDeck/</code>).
+      That includes your library JSON, setlist JSON, settings JSON, generated click tracks, and
+      security-scoped bookmarks pointing at the audio files you imported.
+    </p>
+    <p class="leading-relaxed">
+      Audio files themselves are read in place from wherever you keep them on disk; StemDeck does
+      not copy them, modify them, or upload them. Removing the app deletes its Application Support
+      folder; your audio files are unaffected.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink mt-12 mb-4">3. Microphone access</h2>
+    <p class="leading-relaxed">
+      With your explicit permission, StemDeck can record a guide vocal stem from your Mac's
+      microphone or audio input device. Recordings are written to your local library folder and
+      are never transmitted off your Mac. You can revoke microphone access at any time in
+      System Settings → Privacy &amp; Security → Microphone.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink mt-12 mb-4">4. Local-network remote control</h2>
+    <p class="leading-relaxed">
+      StemDeck includes an optional in-app HTTP server that lets phones, tablets, and other
+      computers on the same Wi-Fi network drive transport (start, stop, loop, song select). The
+      server is OFF by default and requires you to set a PIN before it can be enabled.
+    </p>
+    <p class="leading-relaxed">
+      When the server is on, it advertises itself over Bonjour (mDNS) on the local network and
+      accepts connections from devices that supply the PIN. No data leaves your local network. We
+      do not see, log, or transmit anything related to those connections.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink mt-12 mb-4">5. Subscription and purchase information</h2>
+    <p class="leading-relaxed">
+      StemDeck is sold as an auto-renewing subscription through the Mac App Store. Apple processes
+      every purchase, billing event, refund, and cancellation. Apple shares with us only aggregated,
+      anonymised information about subscription activity (e.g. number of active subscribers in a
+      given period). We do not receive your name, email, payment method, or billing address from Apple.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink mt-12 mb-4">6. Crash reports and diagnostics</h2>
+    <p class="leading-relaxed">
+      If your Mac is configured to share crash and usage data with developers (System Settings →
+      Privacy &amp; Security → Analytics &amp; Improvements → Share with App Developers), Apple may
+      forward anonymised crash reports to us. These are used only to fix bugs and contain no
+      personally identifiable information beyond what Apple's anonymisation produces.
+    </p>
+    <p class="leading-relaxed">
+      We do not embed any third-party analytics SDKs (Google Analytics, Firebase Analytics,
+      Crashlytics, Mixpanel, Segment, or anything similar). The app makes no telemetry network
+      calls of its own.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink mt-12 mb-4">7. Children's privacy</h2>
+    <p class="leading-relaxed">
+      StemDeck is not directed to children under 13. We do not knowingly collect any information
+      from children. If you believe a child has interacted with us, please contact us so we can
+      delete anything we may inadvertently hold.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink mt-12 mb-4">8. Your rights</h2>
+    <p class="leading-relaxed">
+      Because we do not collect personal data, there is generally nothing to access, correct, or
+      delete on our side. Account-level rights (export, deletion, refund) for App Store purchases
+      are handled by Apple via the App Store.
+    </p>
+    <p class="leading-relaxed">
+      For users in the EU/UK (GDPR/UK GDPR) or California (CCPA), you may contact us at the
+      address below to confirm what we hold; in nearly every case the answer will be: nothing
+      identifiable about you.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink mt-12 mb-4">9. Changes to this policy</h2>
+    <p class="leading-relaxed">
+      If we materially change how StemDeck handles information, we will update this page and the
+      "Last updated" date at the top. Continued use of the app after a change constitutes acceptance
+      of the updated policy.
+    </p>
+
+    <h2 class="text-2xl font-semibold text-ink mt-12 mb-4">10. Contact</h2>
+    <p class="leading-relaxed">
+      Edipko Inc.<br />
+      Email: <a class="text-accent hover:underline" href="mailto:support@edipkoinc.com">support@edipkoinc.com</a>
+    </p>
+
+    <p class="mt-16 text-muted text-sm">
+      ← <a class="text-soft hover:text-ink" href="/">Back to StemDeck</a>
+    </p>
+  </main>
+
+  <footer class="border-t border-white/5 mt-16">
+    <div class="mx-auto max-w-6xl px-6 py-8 text-xs text-muted text-center">
+      © 2026 Edipko Inc. · <a class="hover:text-ink" href="/privacy.html">Privacy</a> · <a class="hover:text-ink" href="/terms.html">Terms</a>
+    </div>
+  </footer>
+</body>
+</html>

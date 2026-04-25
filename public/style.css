@@ -1,0 +1,30 @@
+/* StemDeck site polish — Tailwind handles the bulk; this is for the
+   smooth-scroll, link spacing, and prose treatments that don't fit
+   utility classes cleanly. */
+
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; }
+
+/* Slight rule under headings on the marketing pages. Subtle — not a
+   border block. */
+.prose-stemdeck h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.prose-stemdeck p   { margin: 0.85rem 0; line-height: 1.7; }
+.prose-stemdeck a   { color: #06b6d4; }
+.prose-stemdeck a:hover { text-decoration: underline; }
+.prose-stemdeck ul  { list-style: disc; margin-left: 1.4rem; }
+.prose-stemdeck li  { margin: 0.4rem 0; line-height: 1.6; }
+.prose-stemdeck code { font-size: 0.85em; }
+
+/* Reduce the visual heft of focus rings on this dark theme without
+   removing them — keyboard nav still works visibly. */
+:focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Cosmetic: kill the default tap highlight on iOS so buttons don't flash gray. */
+* { -webkit-tap-highlight-color: transparent; }

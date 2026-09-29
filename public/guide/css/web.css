@@ -1,0 +1,140 @@
+/* =============================================================
+   StemDeck User Guide — screen stylesheet for the hosted page
+   (docs/manual/web/index.html). Reuses the print tokens and
+   typography from manual.css, then relaxes the paged-media rules
+   for a continuous, scrolling page.
+   ============================================================= */
+
+@import url("manual.css");
+
+:root {
+  --body-size: 17px;
+  --line-h: 1.6;
+  --measure: 44rem;
+}
+
+html { font-size: var(--body-size); }
+
+body {
+  margin: 0;
+  background: #f6f7f9;
+  color: var(--ink);
+}
+
+/* Top bar with the PDF download. */
+.web-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #0a0f14;
+  color: #f5f7fa;
+  padding: 0.6rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+.web-bar .web-wordmark {
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  color: var(--accent);
+}
+.web-bar a {
+  color: #f5f7fa;
+  border: 1px solid #3a4652;
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  text-decoration: none;
+}
+.web-bar a:hover { border-color: var(--accent); }
+
+/* Page column. */
+.web-main {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+}
+
+/* Cover becomes a hero card. */
+.cover {
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  margin: 1.5rem 0 2rem;
+}
+.cover .cover-wordmark { margin-top: 0; }
+.cover .cover-foot { margin-top: 1.5rem; }
+.cover-title { font-size: 2.6rem; }
+.cover-subtitle { font-size: 1.05rem; }
+
+/* TOC: no page numbers on screen, show as a plain list. */
+.toc-page { page-break-before: auto; margin-bottom: 2.5rem; }
+.toc-heading { font-size: 1.8rem; margin-bottom: 1rem; }
+.toc-page a::after { content: none; }
+.toc-page a { display: block; padding: 0.15rem 0; border-bottom: none; }
+.toc-page a:hover { color: var(--accent); }
+.toc-page > ul > li > a { font-size: 1rem; }
+
+/* Headings: no forced page breaks; generous spacing instead. */
+h1 {
+  page-break-before: auto;
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  font-size: 2rem;
+}
+h2 { font-size: 1.35rem; margin-top: 2.2rem; }
+h3 { font-size: 1.1rem; margin-top: 1.6rem; }
+
+.part-divider {
+  margin: 4rem 0 0.5rem;
+  padding: 1.25rem 1.5rem;
+  background: #0a0f14;
+  color: #f5f7fa;
+  border-radius: 10px;
+  page-break-before: auto;
+  page-break-after: auto;
+  min-height: 0;
+  height: auto;
+}
+.part-divider .part-eyebrow, .part-divider .part-eyebrow p { color: var(--accent); }
+.part-divider .part-name, .part-divider .part-name p { color: #f5f7fa; font-size: 2rem; }
+
+/* Figures: fluid images, placeholder box for shots not yet captured. */
+figure { margin: 1.5rem 0; }
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--rule);
+  background: #fff;
+}
+figure img.missing-shot {
+  display: block;
+  width: 100%;
+  min-height: 9rem;
+  border: 1px dashed #b7bec6;
+  background: repeating-linear-gradient(135deg, #f0f2f5 0 12px, #e6e9ee 12px 24px);
+}
+
+/* Tables and code scroll instead of overflowing the column. */
+table { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; }
+pre { overflow-x: auto; }
+
+a { border-bottom: 1px solid var(--rule); }
+a:hover { color: var(--accent); }
+
+.callout { border-radius: 8px; }
+
+@media (max-width: 600px) {
+  :root { --body-size: 16px; }
+  .cover { padding: 1.75rem 1.25rem; }
+  .cover-title { font-size: 2rem; }
+  h1 { font-size: 1.6rem; }
+  .part-divider .part-name, .part-divider .part-name p { font-size: 1.5rem; }
+}
+
+@media print {
+  .web-bar { display: none; }
+}

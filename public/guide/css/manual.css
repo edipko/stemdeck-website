@@ -1,0 +1,481 @@
+/* =============================================================
+   StemDeck User Guide — paged media stylesheet
+   Rendered via Paged.js. Uses CSS Paged Media Module Level 3.
+   ============================================================= */
+
+/* ---------- Fonts -------------------------------------------- */
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: local("Inter"), local("Inter-Regular"), local("Helvetica Neue");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 500;
+  src: local("Inter Medium"), local("Inter-Medium"), local("Helvetica Neue Medium");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  src: local("Inter SemiBold"), local("Inter-SemiBold"), local("Helvetica Neue Bold");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  src: local("Inter Bold"), local("Inter-Bold"), local("Helvetica Neue Bold");
+}
+
+/* ---------- Design tokens ------------------------------------ */
+
+:root {
+  --ink:       #1a1a1a;
+  --ink-soft:  #3a3a3a;
+  --muted:     #6a6a6a;
+  --rule:      #d8d8d8;
+  --rule-soft: #ececec;
+  --paper:     #ffffff;
+
+  --accent:    #0891b2;   /* cyan, in-app accent */
+  --tip:       #0369a1;   /* blue */
+  --stage:     #b45309;   /* amber */
+  --warn:      #b91c1c;   /* red */
+
+  --body-font: "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono-font: ui-monospace, "SF Mono", "JetBrains Mono", "Menlo", monospace;
+
+  --body-size: 10.5pt;
+  --line-h:    1.55;
+}
+
+/* ---------- Page geometry ------------------------------------ */
+
+@page {
+  size: letter;
+  margin: 0.9in 0.9in 0.9in 0.9in;
+
+  @top-left {
+    content: string(book-title);
+    font: 400 8.5pt var(--body-font);
+    color: var(--muted);
+  }
+  @top-right {
+    content: string(chapter-title);
+    font: 400 8.5pt var(--body-font);
+    color: var(--muted);
+  }
+  @bottom-left {
+    content: "StemDeck User Guide";
+    font: 400 8pt var(--body-font);
+    color: var(--muted);
+  }
+  @bottom-right {
+    content: counter(page);
+    font: 500 8.5pt var(--body-font);
+    color: var(--ink);
+  }
+}
+
+/* No running headers/footers on page 1 (the cover). */
+@page :first {
+  @top-left    { content: none; }
+  @top-right   { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right{ content: none; }
+}
+
+/* ---------- Base ---------------------------------------------- */
+
+html {
+  font-family: var(--body-font);
+  font-size: var(--body-size);
+  line-height: var(--line-h);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "liga", "calt", "ss01";
+}
+
+body {
+  margin: 0;
+  /* Used by running headers */
+  string-set: book-title "StemDeck User Guide";
+}
+
+p {
+  margin: 0 0 0.55em 0;
+  orphans: 3;
+  widows: 3;
+  hyphens: auto;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 0.5px solid var(--rule);
+}
+
+strong { font-weight: 600; }
+em { font-style: italic; }
+small { font-size: 9pt; color: var(--muted); }
+
+code {
+  font-family: var(--mono-font);
+  font-size: 0.9em;
+  background: #f3f4f6;
+  padding: 0.08em 0.28em;
+  border-radius: 2px;
+}
+
+pre {
+  font-family: var(--mono-font);
+  font-size: 9pt;
+  line-height: 1.45;
+  background: #f7f7f8;
+  border-left: 2px solid var(--rule);
+  padding: 10pt 12pt;
+  overflow: hidden;
+  page-break-inside: avoid;
+}
+pre code { background: none; padding: 0; }
+
+ul, ol {
+  margin: 0 0 0.6em 0;
+  padding-left: 1.35em;
+}
+li { margin-bottom: 0.2em; }
+li > p { margin-bottom: 0.25em; }
+
+kbd {
+  font-family: var(--body-font);
+  font-size: 9pt;
+  font-weight: 500;
+  background: #f4f4f6;
+  color: var(--ink);
+  padding: 1pt 5pt 1.5pt 5pt;
+  border: 0.5px solid var(--rule);
+  border-bottom-width: 1.25px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+hr {
+  border: none;
+  border-top: 0.5px solid var(--rule);
+  margin: 1.2em 0;
+}
+
+/* ---------- Cover -------------------------------------------- */
+
+/* Cover: compact dark block at the top of the page. Intentionally
+   content-sized (no min-height) — Paged.js duplicates any block whose
+   layout approaches the page height. The break to the TOC is driven
+   by .toc-page's page-break-before, NOT a break-after here. */
+.cover {
+  padding: 0.6in 0.7in 0.6in 0.7in;
+  background: #0a0f14;
+  color: #f5f7fa;
+  box-sizing: border-box;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.cover .cover-wordmark { margin-top: 0.4in; }
+.cover .cover-foot     { margin-top: 0.4in; }
+.cover-inner { max-width: 5.5in; }
+.cover-wordmark {
+  font-family: var(--body-font);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  font-size: 14pt;
+  color: var(--accent);
+  margin-bottom: 0.6in;
+}
+.cover-title {
+  font-family: var(--body-font);
+  font-weight: 600;
+  font-size: 44pt;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  margin-bottom: 0.12in;
+}
+.cover-subtitle {
+  font-weight: 400;
+  font-size: 14pt;
+  color: #a6b1bb;
+  margin-bottom: 0.5in;
+}
+.cover-foot {
+  font-weight: 400;
+  font-size: 10pt;
+  color: #6c757d;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Table of contents -------------------------------- */
+
+.toc-page {
+  /* Break BEFORE the TOC; the next h1 has its own break-before, so
+     no page-break-after here (stacked breaks = blank page). */
+  page-break-before: always;
+}
+.toc-heading {
+  font-size: 28pt;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.45in 0;
+  padding-bottom: 0.12in;
+  border-bottom: 1px solid var(--ink);
+  /* Don't let the TOC heading itself force a new page via h1 rules. */
+  page-break-before: auto !important;
+}
+.toc-page ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.toc-page li { margin: 0; }
+/* Top-level entries (chapters). */
+.toc-page > ul > li {
+  margin: 0.28em 0;
+}
+.toc-page > ul > li > a {
+  font-weight: 600;
+  font-size: 11pt;
+  color: var(--ink);
+}
+/* Sub-entries (subsections) — hide them. TOC stays readable and short. */
+.toc-page > ul ul {
+  display: none;
+}
+/* Link layout: title on the left, page number on the right. */
+.toc-page a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8pt;
+  color: var(--ink);
+  text-decoration: none;
+  border: none;
+  padding: 1pt 0;
+}
+.toc-page a::after {
+  content: target-counter(attr(href), page);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+/* ---------- Part & chapter openers --------------------------- */
+
+h1 {
+  page-break-before: always;
+  font-size: 30pt;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  margin: 0.6in 0 0.35in 0;
+  padding-bottom: 0.18in;
+  border-bottom: 1.5px solid var(--ink);
+  string-set: chapter-title content();
+}
+
+/* Part dividers are full-page, centred. No string-set override — let
+   the running header continue showing the previous chapter title
+   (better than showing "undefined" which Paged.js emits for empty). */
+.part-divider {
+  page-break-before: always;
+  page-break-after: avoid;   /* the following h1's own break handles it */
+  height: 9in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.part-divider .part-eyebrow,
+.part-divider .part-eyebrow p {
+  font-size: 13pt;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.1in 0;
+}
+.part-divider .part-name,
+.part-divider .part-name p {
+  font-size: 54pt;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  color: var(--ink);
+  margin: 0;
+}
+/* A part-divider belongs to a <section> pandoc created around it — the
+   section's own h1/h2 machinery doesn't apply because there is no
+   heading inside the divider div. */
+
+h2 {
+  font-size: 18pt;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 1.4em 0 0.35em 0;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 13pt;
+  font-weight: 600;
+  margin: 1.2em 0 0.3em 0;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-size: 11pt;
+  font-weight: 600;
+  margin: 1em 0 0.25em 0;
+  color: var(--ink-soft);
+  page-break-after: avoid;
+}
+
+/* chapter number chip (optional markup: <span class="chapter-num">3</span>) */
+.chapter-num {
+  display: inline-block;
+  font-family: var(--body-font);
+  font-weight: 500;
+  font-size: 12pt;
+  color: var(--accent);
+  letter-spacing: 0.22em;
+  margin-bottom: 0.15in;
+}
+
+/* ---------- Figures & screenshots ---------------------------- */
+
+figure {
+  margin: 1.1em 0 1.4em 0;
+  page-break-inside: avoid;
+}
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0.5px solid var(--rule);
+  border-radius: 2px;
+  /* Placeholder while a shot is missing: a hatched box tall enough to
+     read as "figure goes here" rather than a broken-image strip. A real
+     image covers it entirely. */
+  min-height: 1.4in;
+  background: repeating-linear-gradient(135deg, #f0f2f5 0 12px, #e6e9ee 12px 24px);
+  color: var(--muted);
+  font-size: 9pt;
+}
+figure figcaption,
+figure > p.caption {
+  margin-top: 6pt;
+  font-size: 9pt;
+  color: var(--muted);
+  line-height: 1.45;
+}
+figure figcaption strong,
+figure > p.caption strong {
+  color: var(--ink);
+  font-weight: 600;
+  margin-right: 4pt;
+}
+
+/* pandoc --implicit-figures wraps images in <figure> with caption in <figcaption> */
+
+/* ---------- Callouts ----------------------------------------- */
+
+.callout {
+  margin: 1em 0;
+  padding: 10pt 14pt 10pt 16pt;
+  border-left: 3px solid var(--accent);
+  background: #f3fbfd;
+  page-break-inside: avoid;
+  font-size: 10pt;
+  line-height: 1.5;
+}
+.callout > p:first-child { margin-top: 0; }
+.callout > p:last-child  { margin-bottom: 0; }
+.callout-label {
+  display: block;
+  font-size: 8.5pt;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 4pt;
+  color: var(--accent);
+}
+
+.callout.tip        { border-color: var(--tip);   background: #f0f8fd; }
+.callout.tip        .callout-label { color: var(--tip); }
+.callout.stage      { border-color: var(--stage); background: #fdf7ee; }
+.callout.stage      .callout-label { color: var(--stage); }
+.callout.warn       { border-color: var(--warn);  background: #fdf2f2; }
+.callout.warn       .callout-label { color: var(--warn); }
+
+/* ---------- Tables ------------------------------------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 9.5pt;
+  page-break-inside: auto;
+}
+thead th {
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid var(--ink);
+  padding: 6pt 8pt 5pt 0;
+}
+tbody td {
+  padding: 5pt 8pt 5pt 0;
+  border-bottom: 0.5px solid var(--rule-soft);
+  vertical-align: top;
+}
+tbody tr:last-child td { border-bottom: none; }
+
+/* ---------- Dt/dd (glossary) --------------------------------- */
+
+dl { margin: 1em 0; }
+dt {
+  font-weight: 600;
+  margin-top: 0.7em;
+}
+dd {
+  margin: 0 0 0.3em 0;
+  color: var(--ink-soft);
+}
+
+/* ---------- Utility ------------------------------------------ */
+
+.no-break { page-break-inside: avoid; }
+.break-before { page-break-before: always; }
+.small { font-size: 9pt; color: var(--muted); }
+.muted { color: var(--muted); }
+.pill {
+  display: inline-block;
+  font-size: 8.5pt;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 0.75px solid var(--accent);
+  padding: 1.5pt 6pt;
+  border-radius: 10pt;
+}
+
+/* Blockquote — used sparingly for pull quotes. */
+blockquote {
+  border-left: 2px solid var(--rule);
+  margin: 1em 0;
+  padding: 0 0 0 14pt;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+/* Print-only helpers */
+.screen-only { display: none; }

@@ -4,7 +4,7 @@
 <base href="/guide/">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>StemDeck User Guide (Version 1.6.2)</title>
+  <title>StemDeck User Guide (Version 1.7.0)</title>
   <meta name="description" content="The StemDeck User Guide: setting up, building songs, routing to your console, and running a show with StemDeck, the macOS live stem-playback app." />
   <link rel="stylesheet" href="css/web.css" />
 </head>
@@ -12,7 +12,7 @@
 
 <div class="web-bar">
   <span><span class="web-wordmark">STEMDECK</span> &nbsp; StemDeck User
-Guide &middot; Version 1.6.2</span>
+Guide &middot; Version 1.7.0</span>
   <a href="StemDeck-User-Guide.pdf">Download PDF</a>
 </div>
 
@@ -22,7 +22,7 @@ Guide &middot; Version 1.6.2</span>
   <div class="cover-inner">
     <div class="cover-wordmark">STEMDECK</div>
     <div class="cover-title">StemDeck User Guide</div>
-    <div class="cover-subtitle">Version 1.6.2</div>
+    <div class="cover-subtitle">Version 1.7.0</div>
     <div class="cover-foot">Dipko Services LLC</div>
   </div>
 </section>
@@ -215,7 +215,7 @@ does not assume you have used a DAW. Every part stands on its own; read
 front to back, or jump straight to what you need.</p>
 <section id="about-this-version" class="level2">
 <h2>About this version</h2>
-<p>This edition covers StemDeck 1.6.2 on macOS 14 (Sonoma) or later. If
+<p>This edition covers StemDeck 1.7.0 on macOS 14 (Sonoma) or later. If
 something on screen does not match what you read here, trust the app and
 check for a newer guide at <a
 href="https://www.stemdeck44.com/guide/">www.stemdeck44.com/guide</a>.
@@ -258,6 +258,36 @@ work or cause an audible failure on stage. Read before you proceed.</p>
 <p>Keyboard shortcuts look like this:
 <kbd>⇧</kbd><kbd>⌘</kbd><kbd>?</kbd>. Menu paths look like <strong>Song
 → Align Beat Grid…</strong>. A full list is in Part 10.</p>
+</section>
+<section id="whats-new-in-1.7" class="level2">
+<h2>What’s new in 1.7</h2>
+<p><strong>A new guide cue library, revision 3.</strong> Every guide cue
+now speaks in one consistent voice. There are new cues too: counts 5
+through 8, <strong>Hold</strong>, <strong>Stop</strong>,
+<strong>Vamp</strong>, <strong>Interlude</strong>, <strong>Key
+Change</strong>, and <strong>A Cappella</strong>, and new phrases such
+as <strong>Intro Breakdown</strong>, <strong>Breakdown Chorus</strong>,
+<strong>Build</strong>, <strong>Verse Build</strong>, <strong>Outro
+Solo</strong>, and <strong>Drums In 2 3 4</strong>. A song you built
+earlier keeps sounding exactly as it did until you choose
+<strong>Upgrade to rev3</strong> in the Guide Builder, which moves each
+cue so you still hear it where you heard it before. <em>Part 5.</em></p>
+<p><strong>A Guide Builder that fits your screen.</strong> The window
+sizes itself to the display, and on a smaller screen the middle scrolls
+while Build, Cancel, and Clear Guide stay pinned along the bottom.
+<em>Part 5.</em></p>
+<p><strong>Reorder songs by dragging.</strong> In a setlist, drag a song
+row up or down to change the running order. <em>Part 6.</em></p>
+<p><strong>Rename from the song list.</strong> Right-click any song and
+choose <strong>Rename…</strong>. The song you clicked is renamed without
+being loaded, so a song that is playing keeps playing. <em>Part
+3.</em></p>
+<p><strong>A warning triangle that tells you why.</strong> Hover the
+triangle on a song row to see which stems have no routing rule and will
+play on output 1, and how to fix them. <em>Part 7.</em></p>
+<p><strong>An update notice.</strong> StemDeck quietly tells you when a
+newer version is on the Mac App Store, and <strong>Help → Check for
+Updates…</strong> asks on demand. <em>Part 6.</em></p>
 </section>
 <section id="whats-new-in-1.6" class="level2">
 <h2>What’s new in 1.6</h2>
@@ -882,8 +912,12 @@ saves.</p>
 </section>
 <section id="renaming-and-deleting-songs" class="level1">
 <h1>Renaming and deleting songs</h1>
-<p>To rename a song, select it and choose <strong>Song → Rename
-Song…</strong>. StemDeck renames the song’s folder on disk to match, but
+<p>To rename a song, right-click it in the song list (the library or a
+setlist) and choose <strong>Rename…</strong>. This renames the song you
+clicked without loading it, so a song that is playing keeps playing
+while you rename another. You can also select a song and choose
+<strong>Song → Rename Song…</strong>, which renames the selected song.
+Either way, StemDeck renames the song’s folder on disk to match, but
 keeps any BPM text that was already part of the folder name: renaming
 “Neon Moon (110)” to “Neon Moon Reprise” gives you “Neon Moon Reprise
 (110)”, not a folder that’s lost its tempo.</p>
@@ -1490,6 +1524,12 @@ beat and the measured beat grid described later in this chapter.</p>
 a caption across the top: pick a cue, then drag it onto the timeline to
 line it up by eye and ear. Build bakes one guide stem; the rest of the
 song’s stems are left alone.</p>
+<p>The window sizes itself to the screen it opens on. On a smaller
+display, the middle of the window (the header, transport, timeline, and
+inspector) scrolls up and down, while the action bar along the bottom,
+with <strong>Build</strong>, <strong>Cancel</strong>, and <strong>Clear
+Guide</strong>, stays pinned in view, so Build is never off the edge of
+the screen.</p>
 <p>At the top right, a <strong>SONG BPM</strong> readout shows the tempo
 the builder is working at, next to the zoom controls: <strong>Zoom
 In</strong>, <strong>Zoom Out</strong>, <strong>Start</strong> (jump to
@@ -1517,26 +1557,35 @@ the cue palette, preview transport, and timeline.</figcaption>
 </section>
 <section id="the-cue-palette" class="level1">
 <h1>The cue palette</h1>
-<p>The palette is organized in three rows, and every cue in it is real,
-prerecorded speech, either as a whole phrase or as single words
-assembled together. <strong>Whole phrases</strong> are complete
-recordings (“Chorus, two, three, four” said in one breath) stretched to
-match the song’s tempo, and are the ones you’ll reach for most.
-<strong>Single word cues</strong> (the violet row) are built by placing
-individual recorded words on their own beats, with silence in between,
-covering what whole phrases don’t: bare section names, short counts, and
-single beats.</p>
+<p>The palette is organized in three rows, and every cue in it is
+recorded speech in one consistent voice (the cue library’s revision 3),
+either as a whole phrase or as single words assembled together.
+<strong>Whole phrases</strong> are complete recordings (“Chorus, two,
+three, four” said in one breath) stretched to match the song’s tempo,
+and are the ones you’ll reach for most. <strong>Single word
+cues</strong> (the violet row) are built by placing individual recorded
+words on their own beats, with silence in between, covering what whole
+phrases don’t: bare section names, short counts, and single beats.</p>
 <p>The three rows:</p>
 <ol type="1">
 <li><strong>Amber, the most-used cues</strong>: Intro, Verse, Chorus,
 Solo, Bridge, Tag, Outro, End (hit), End (count).</li>
 <li><strong>Cyan, the rest of the whole phrases</strong>: 1 2 3 4, Drums
 In, Pre Chorus, Chorus Solo, Verse Breakdown, Breakdown, Chorus Outro,
-Pickup.</li>
+Pickup, and the phrases added in revision 3: Intro Breakdown, Breakdown
+Chorus, Chorus Breakdown, Breakdown Pre Chorus, Breakdown Bridge,
+Breakdown Verse, Build, Verse Build, Outro Solo, and Drums In 2 3
+4.</li>
 <li><strong>Violet, labeled SINGLE WORD CUES</strong>: the bare section
 names (Intro, Verse, Pre Chorus, Chorus, Chorus Solo, Solo, Bridge,
 Verse Breakdown, Breakdown, Chorus Outro, Tag, Outro), plus 1 2, 1 2 3,
-and single beats 1, 2, 3, and 4.</li>
+and single beats 1 through 8. Revision 3 adds <strong>Hold</strong>,
+<strong>Stop</strong>, <strong>Vamp</strong>,
+<strong>Interlude</strong>, <strong>Key Change</strong>, and <strong>A
+Cappella</strong> to this row. Key Change and A Cappella take two beats.
+Chorus Solo, Verse Breakdown, and Chorus Outro are also two beats here:
+the two words land on consecutive beats instead of being squeezed into
+one.</li>
 </ol>
 <p>Notice <strong>End</strong> is two separate cues, not one:
 <strong>End (hit)</strong> is a single stab for a song that ends on one
@@ -1628,14 +1677,40 @@ entirely.</p>
 </section>
 <section id="cue-revisions" class="level1">
 <h1>Cue revisions</h1>
-<p>The cue recordings themselves occasionally get improved. Each song
-remembers which set it was built with, shown as <strong>Guide cues: rev
-N</strong>. If a newer set is available, an <strong>Upgrade to rev
-N</strong> button appears. Upgrading shifts your already-placed cues so
-they still land exactly where you originally heard them, using the newer
-recordings; click <strong>Build</strong> afterward to bake the upgrade.
-Until then, the song keeps sounding exactly as it always has, so a set
-you’ve already rehearsed to never changes without you asking for it.</p>
+<p>The cue recordings themselves get improved from time to time. Each
+song remembers which set it was built with, shown as <strong>Guide cues:
+rev N</strong>. The current set is <strong>rev3</strong>, a new library
+in which every cue shares one consistent voice and which adds the new
+cues listed under <em>The cue palette</em>. A song built on an older set
+keeps sounding exactly as it always has, so a guide you have already
+rehearsed to never changes unless you ask.</p>
+<p>When a newer set is available for the song, an <strong>Upgrade to
+rev3</strong> button appears next to the caption. Click it and StemDeck
+moves each placed cue so it is heard where you heard it before, even
+though the new recording starts its first syllable at a slightly
+different moment than the old one. It works that out from the recordings
+themselves, so the shift is exact for each cue rather than a rough
+nudge. When it finishes, a green line says <strong>Upgraded to rev3,
+cues shifted to stay where you hear them. Takes effect on the next
+Build.</strong> Beside it is a scrolling strip with each cue’s shift in
+milliseconds. Click <strong>Build</strong> afterward to bake the upgrade
+into a new guide stem.</p>
+<p>Sometimes StemDeck cannot place a cue, and it tells you in amber text
+in that strip rather than guessing:</p>
+<ul>
+<li><strong>“Cue: not in rev3”</strong> means the new library has no cue
+by that name. The cue stays where it is, and you will need to replace it
+by hand.</li>
+<li><strong>“Cue: shift unknown, not moved”</strong> means StemDeck
+could not measure that cue’s old or new recording. The cue stays where
+it is. Listen to it against the song before you Build.</li>
+</ul>
+<div class="callout stage">
+<p><span class="callout-label">Stage Note</span> Upgrading is never
+automatic. If a guide is working for your band, leave it on its current
+revision until you have time to upgrade, Build, and listen through the
+whole song.</p>
+</div>
 </section>
 <section id="checking-a-guide-against-its-cue-map" class="level1">
 <h1>Checking a guide against its cue map</h1>
@@ -1815,6 +1890,15 @@ you launch StemDeck.</p>
 submenu, which lists every setlist (grayed out if the song’s already in
 it). You can also right-click a song in the library and choose
 <strong>Add to Setlist</strong>.</p>
+</section>
+<section id="reordering-a-setlist" class="level2">
+<h2>Reordering a setlist</h2>
+<p>Drag a song row up or down within a setlist to change the running
+order. A line shows where the song will land when you let go, and
+dragging near the top or bottom edge of a long list scrolls it for you.
+Reordering only changes that setlist: the library and your other
+setlists are untouched. It works only inside an open setlist, not in the
+<strong>Library</strong> view.</p>
 <p>The <strong>Setlist</strong> menu also carries <strong>New
 Setlist…</strong>, <strong>Rename Setlist…</strong>, and <strong>Delete
 Setlist…</strong>, matching the sidebar dropdown, for whichever you have
@@ -1824,6 +1908,30 @@ open at the moment.</p>
 removes the list itself. Every song that was in it stays in your
 library, untouched.</p>
 </div>
+</section>
+<section id="renaming-a-song-from-the-list" class="level2">
+<h2>Renaming a song from the list</h2>
+<p>Right-click a song, in the library or in a setlist, and choose
+<strong>Rename…</strong>. The song you clicked is renamed without being
+loaded, so a song that is playing keeps playing. See <em>Part 3</em> for
+what a rename does to the folder.</p>
+</section>
+<section id="update-notices" class="level2">
+<h2>Update notices</h2>
+<p>StemDeck checks the Mac App Store for a newer version about ten
+seconds after launch, then at most once a day. When there is one, a cyan
+bar with an amber outline appears at the bottom of the window:
+<strong>StemDeck N is available (you have M)</strong>, with
+<strong>Update</strong>, <strong>Later</strong>, and <strong>Skip This
+Version</strong>. <strong>Update</strong> opens the App Store; StemDeck
+never downloads or installs anything itself. <strong>Later</strong>
+hides the bar until the next daily check, and <strong>Skip This
+Version</strong> hides it until a still newer version appears.</p>
+<p>The bar never appears while a song is playing, and it floats over the
+window instead of moving anything. To ask on demand, choose <strong>Help
+→ Check for Updates…</strong>, which always answers, even for a version
+you skipped. If you are playing, or a dialog is open, the item is greyed
+out.</p>
 </section>
 <section id="sidebar-width-and-narrow-windows" class="level2">
 <h2>Sidebar width and narrow windows</h2>
@@ -2106,7 +2214,7 @@ name.</li>
 applies, with the stem flagged so you notice.</li>
 </ol>
 <p>The routing rules are what make dragging in a folder of stems mostly
-route itself. Out of the box, 1.6.2 ships with these defaults:</p>
+route itself. Out of the box, 1.7.0 ships with these defaults:</p>
 <p>Table 7.1 — Default output rules.</p>
 <table>
 <thead>
@@ -2202,6 +2310,11 @@ click <strong>Not Now</strong> to leave it for later. Anything you leave
 blank stays on output 1, and StemDeck flags it: a warning triangle
 appears next to that song in the sidebar, and the stem’s OUT field tints
 amber.</p>
+<p>Hover the warning triangle to see why it is there. The tooltip reads
+“Warning: no routing rule matches, so these stems play on output 1,”
+followed by a list of the affected stems by name and file name, and then
+the fix: set each stem’s OUT number on its card, or add a pattern in
+<strong>Settings → Channels</strong>.</p>
 <p>You can come back to this later from <strong>Song → Assign
 Outputs…</strong>, which is enabled whenever the selected song has a
 flagged stem.</p>
@@ -2748,6 +2861,9 @@ browser.</p></li>
 <li><p><strong>Show Welcome Tour</strong>
 <kbd>⇧</kbd><kbd>⌘</kbd><kbd>?</kbd>: replays the seven-step onboarding
 tour.</p></li>
+<li><p><strong>Check for Updates…</strong>: asks the Mac App Store
+whether a newer StemDeck is out and tells you the answer. Greyed out
+while a song is playing or a dialog is open.</p></li>
 <li><p><strong>Contact Support…</strong>: opens a pre-addressed email to
 support@edipkoinc.com.</p></li>
 <li><p><strong>StemDeck Website</strong>: opens
@@ -2763,7 +2879,7 @@ check <strong>Settings → Account</strong> first.</p>
 </section>
 <section id="keyboard-and-mouse-shortcuts" class="level1">
 <h1>Keyboard and mouse shortcuts</h1>
-<p>Table 10.1 — Keyboard shortcuts in StemDeck 1.6.2.</p>
+<p>Table 10.1 — Keyboard shortcuts in StemDeck 1.7.0.</p>
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -3288,9 +3404,10 @@ on the next play from the top. Press <strong>Stop</strong>, then
 <p>If the song’s BPM changed since the guide was built, open
 <strong>Song → Guide Builder…</strong> and Build again. If the Builder
 offers <strong>Upgrade to rev N</strong>, the cue library has improved;
-upgrading shifts your cues so they still land where you placed them,
-then Build. Use <strong>Check Guide Against Cue Map</strong> if you are
-not sure the built file matches the cues you see.</p>
+upgrading shifts your cues so they still land where you placed them (any
+cue it cannot place is flagged in amber and left where it was), then
+Build. Use <strong>Check Guide Against Cue Map</strong> if you are not
+sure the built file matches the cues you see.</p>
 </section>
 <section id="the-phone-remote-will-not-connect" class="level2">
 <h2>The phone remote will not connect</h2>
@@ -3335,6 +3452,8 @@ first), or make sure the drive is mounted before launch.</p>
 <ul>
 <li><strong>Help → StemDeck User Guide</strong> opens the latest version
 of this guide.</li>
+<li><strong>Help → Check for Updates…</strong> tells you whether a newer
+StemDeck is on the Mac App Store.</li>
 <li><strong>Help → Contact Support…</strong> starts an email to
 support@edipkoinc.com. Include your StemDeck version (StemDeck → About
 StemDeck), your Mac and macOS version, the audio interface, and what you
@@ -3454,6 +3573,14 @@ Inter.</p>
 </section>
 <section id="version-history" class="level1 chapter-opener">
 <h1 class="chapter-opener">Version history</h1>
+<p><strong>1.7.0.</strong> A new guide cue library, revision 3, with
+every cue in one voice and new cues (counts 5 to 8, Hold, Stop, Vamp,
+Interlude, Key Change, A Cappella, and a set of new breakdown and build
+phrases). Upgrade a song’s guide to it and each cue keeps its place. A
+Guide Builder that fits smaller screens. Drag to reorder songs in a
+setlist. Rename from the song list’s right-click menu. A warning
+triangle you can hover to see which stems are unrouted. An update notice
+and Help → Check for Updates….</p>
 <p><strong>1.6.2.</strong> A four-segment fader law with taller faders
 on screen, Option-drag for fine control, double-click to snap back to
 unity. A proper About panel. A Help menu with a direct link to this

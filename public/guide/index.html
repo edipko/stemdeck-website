@@ -4,7 +4,7 @@
 <base href="/guide/">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>StemDeck User Guide (Version 1.6.2)</title>
+  <title>StemDeck User Guide (Version 1.8.0)</title>
   <meta name="description" content="The StemDeck User Guide: setting up, building songs, routing to your console, and running a show with StemDeck, the macOS live stem-playback app." />
   <link rel="stylesheet" href="css/web.css" />
 </head>
@@ -12,7 +12,7 @@
 
 <div class="web-bar">
   <span><span class="web-wordmark">STEMDECK</span> &nbsp; StemDeck User
-Guide &middot; Version 1.6.2</span>
+Guide &middot; Version 1.8.0</span>
   <a href="StemDeck-User-Guide.pdf">Download PDF</a>
 </div>
 
@@ -22,7 +22,7 @@ Guide &middot; Version 1.6.2</span>
   <div class="cover-inner">
     <div class="cover-wordmark">STEMDECK</div>
     <div class="cover-title">StemDeck User Guide</div>
-    <div class="cover-subtitle">Version 1.6.2</div>
+    <div class="cover-subtitle">Version 1.8.0</div>
     <div class="cover-foot">Dipko Services LLC</div>
   </div>
 </section>
@@ -41,6 +41,8 @@ Guide &middot; Version 1.6.2</span>
   show</a></li>
   <li><a href="#the-welcome-tour">The Welcome
   Tour</a></li>
+  <li><a href="#joining-the-mailing-list"
+ >Joining the mailing list</a></li>
   <li><a href="#how-stemdeck-thinks-about-audio"
  >How StemDeck thinks about
   audio</a></li>
@@ -215,7 +217,7 @@ does not assume you have used a DAW. Every part stands on its own; read
 front to back, or jump straight to what you need.</p>
 <section id="about-this-version" class="level2">
 <h2>About this version</h2>
-<p>This edition covers StemDeck 1.6.2 on macOS 14 (Sonoma) or later. If
+<p>This edition covers StemDeck 1.8.0 on macOS 14 (Sonoma) or later. If
 something on screen does not match what you read here, trust the app and
 check for a newer guide at <a
 href="https://www.stemdeck44.com/guide/">www.stemdeck44.com/guide</a>.
@@ -258,6 +260,36 @@ work or cause an audible failure on stage. Read before you proceed.</p>
 <p>Keyboard shortcuts look like this:
 <kbd>⇧</kbd><kbd>⌘</kbd><kbd>?</kbd>. Menu paths look like <strong>Song
 → Align Beat Grid…</strong>. A full list is in Part 10.</p>
+</section>
+<section id="whats-new-in-1.7" class="level2">
+<h2>What’s new in 1.7</h2>
+<p><strong>A new guide cue library, revision 3.</strong> Every guide cue
+now speaks in one consistent voice. There are new cues too: counts 5
+through 8, <strong>Hold</strong>, <strong>Stop</strong>,
+<strong>Vamp</strong>, <strong>Interlude</strong>, <strong>Key
+Change</strong>, and <strong>A Cappella</strong>, and new phrases such
+as <strong>Intro Breakdown</strong>, <strong>Breakdown Chorus</strong>,
+<strong>Build</strong>, <strong>Verse Build</strong>, <strong>Outro
+Solo</strong>, and <strong>Drums In 2 3 4</strong>. A song you built
+earlier keeps sounding exactly as it did until you choose
+<strong>Upgrade to rev3</strong> in the Guide Builder, which moves each
+cue so you still hear it where you heard it before. <em>Part 5.</em></p>
+<p><strong>A Guide Builder that fits your screen.</strong> The window
+sizes itself to the display, and on a smaller screen the middle scrolls
+while Build, Cancel, and Clear Guide stay pinned along the bottom.
+<em>Part 5.</em></p>
+<p><strong>Reorder songs by dragging.</strong> In a setlist, drag a song
+row up or down to change the running order. <em>Part 6.</em></p>
+<p><strong>Rename from the song list.</strong> Right-click any song and
+choose <strong>Rename…</strong>. The song you clicked is renamed without
+being loaded, so a song that is playing keeps playing. <em>Part
+3.</em></p>
+<p><strong>A warning triangle that tells you why.</strong> Hover the
+triangle on a song row to see which stems have no routing rule and will
+play on output 1, and how to fix them. <em>Part 7.</em></p>
+<p><strong>An update notice.</strong> StemDeck quietly tells you when a
+newer version is on the Mac App Store, and <strong>Help → Check for
+Updates…</strong> asks on demand. <em>Part 6.</em></p>
 </section>
 <section id="whats-new-in-1.6" class="level2">
 <h2>What’s new in 1.6</h2>
@@ -439,6 +471,12 @@ duplicates the stems into your library, which is the safe default if the
 folder lives somewhere else on your Mac. Move relocates the folder into
 your library outright. Reference in place only applies if the folder is
 already inside your library.</p>
+<figure>
+<img src="screenshots/02-import-folder-sheet.png"
+alt="Figure 1.2: The import sheet for a single song folder, with Copy selected." />
+<figcaption aria-hidden="true">Figure 1.2: The import sheet for a single
+song folder, with Copy selected.</figcaption>
+</figure>
 <p>Click the <strong>Import</strong> button and the song appears in your
 library, already built.</p>
 </section>
@@ -459,6 +497,12 @@ matching words in its filename against the routing rules in
 goes to output 3, “bass” to output 4, and so on. The full default table
 is in <em>How a stem gets its output</em> in Part 7.</li>
 </ul>
+<figure>
+<img src="screenshots/03-song-loaded-first-time.png"
+alt="Figure 1.3: A freshly imported song, stems auto-named, colored, and routed." />
+<figcaption aria-hidden="true">Figure 1.3: A freshly imported song,
+stems auto-named, colored, and routed.</figcaption>
+</figure>
 <p>If one of your files does not match any rule, for example a stem
 named “Piano Fill” with no recognizable keyword, StemDeck does not just
 guess. It opens <strong>“Choose outputs for new stems”</strong> and asks
@@ -466,6 +510,12 @@ you to pick an output for that stem before you go further. Anything you
 leave blank plays on output 1, the click output, and is flagged with a
 warning triangle next to the song in the sidebar so you notice before a
 show, not during one.</p>
+<figure>
+<img src="screenshots/04-assign-outputs-prompt.png"
+alt="Figure 1.4: The Assign Outputs prompt for a stem that matched no routing rule." />
+<figcaption aria-hidden="true">Figure 1.4: The Assign Outputs prompt for
+a stem that matched no routing rule.</figcaption>
+</figure>
 </section>
 <section id="step-3-verify-playback" class="level2">
 <h2>Step 3: verify playback</h2>
@@ -520,6 +570,12 @@ never trap the band in a vamp they did not ask for. Press
 <kbd>Space</kbd> once to turn the loop off, then again for
 <strong>GO</strong>.</p>
 </div>
+<figure>
+<img src="screenshots/06-transport-ready-to-go.png"
+alt="Figure 1.5: The transport row, ready for downbeat: device confirmed, outputs clean, MUTE ALL off." />
+<figcaption aria-hidden="true">Figure 1.5: The transport row, ready for
+downbeat: device confirmed, outputs clean, MUTE ALL off.</figcaption>
+</figure>
 </section>
 <section id="the-welcome-tour" class="level1">
 <h1>The Welcome Tour</h1>
@@ -554,6 +610,30 @@ whole mix. Right-click it for <strong>Export Mix</strong>, which bounces
 the song, click and lead-in included, to a file your bandmates can
 rehearse against.</p></li>
 </ol>
+<figure>
+<img src="screenshots/05-welcome-tour-library.png"
+alt="Figure 1.6: The Welcome Tour’s first bubble, anchored to the library sidebar." />
+<figcaption aria-hidden="true">Figure 1.6: The Welcome Tour’s first
+bubble, anchored to the library sidebar.</figcaption>
+</figure>
+</section>
+<section id="joining-the-mailing-list" class="level1">
+<h1>Joining the mailing list</h1>
+<p>After the tour, StemDeck asks once whether you want to join the
+StemDeck mailing list. It is entirely optional, and nothing in the app
+changes if you say no. Members get practical tips for using StemDeck on
+stage, early access to beta builds, and a vote on what gets built next,
+at most about one email a month.</p>
+<p>To join, type your email address and click <strong>Join</strong>,
+then open the confirmation email and click <strong>Confirm
+subscription</strong>. You are not added until you confirm. Click
+<strong>Not Now</strong> and the invitation never comes back on its
+own.</p>
+<p>StemDeck never shows the invitation while a song is playing or on top
+of another prompt. You can join later, or again after unsubscribing,
+from <strong>Help → Join the StemDeck Mailing List…</strong>. Every
+email has a one-click Unsubscribe link. StemDeck itself does not store
+your address; see the privacy policy at www.stemdeck44.com/privacy.</p>
 <div class="part-divider">
 <div class="part-eyebrow">
 <p>Part 2</p>
@@ -750,6 +830,12 @@ file for you. Never open it and edit it by hand: a typo there can make
 the song unreadable.</p>
 <p>Setlists live in the same library folder, in a <code>setlists</code>
 subfolder, one file per setlist.</p>
+<figure>
+<img src="screenshots/12-settings-library-tab.png"
+alt="Figure 3.1: The Settings window’s Library tab, showing the library folder path and its buttons." />
+<figcaption aria-hidden="true">Figure 3.1: The Settings window’s Library
+tab, showing the library folder path and its buttons.</figcaption>
+</figure>
 <p><strong>Settings → Library</strong> is where you manage the folder
 itself:</p>
 <ul>
@@ -810,6 +896,12 @@ the original folder alone and copies the files into your library),
 <strong>Move</strong> (moves the folder into your library), or
 <strong>Reference in place</strong> (only available if the folder is
 already inside your library folder somewhere else).</p>
+<figure>
+<img src="screenshots/13-import-folder-sheet.png"
+alt="Figure 3.2: The Import Folder sheet with Copy, Move, and Reference in place." />
+<figcaption aria-hidden="true">Figure 3.2: The Import Folder sheet with
+Copy, Move, and Reference in place.</figcaption>
+</figure>
 <p><strong>File → New Song from Files…</strong>
 (<kbd>⌘</kbd><kbd>N</kbd>) picks one or more loose audio files and
 always copies them into a brand new song folder. You’ll be asked to
@@ -825,6 +917,12 @@ reports back what happened to each one.</li>
 them into a new song folder for you, the same as <strong>New Song from
 Files…</strong>.</li>
 </ul>
+<figure>
+<img src="screenshots/14-batch-import-pane.png"
+alt="Figure 3.3: The batch import pane with several folders queued and one skipped as already a song." />
+<figcaption aria-hidden="true">Figure 3.3: The batch import pane with
+several folders queued and one skipped as already a song.</figcaption>
+</figure>
 <p>In a batch, a folder can be skipped rather than imported:</p>
 <ul>
 <li>If a folder is already a StemDeck song (it already has its own
@@ -879,11 +977,21 @@ control setup. Keep both laptops on StemDeck 1.6 or later if they’ll
 share a library folder: an older version doesn’t understand manual
 output assignments and will silently drop them the next time it
 saves.</p>
+<figure>
+<img src="screenshots/15-import-song-package.png"
+alt="Figure 3.4: Import Song or Setlist package picker." />
+<figcaption aria-hidden="true">Figure 3.4: Import Song or Setlist
+package picker.</figcaption>
+</figure>
 </section>
 <section id="renaming-and-deleting-songs" class="level1">
 <h1>Renaming and deleting songs</h1>
-<p>To rename a song, select it and choose <strong>Song → Rename
-Song…</strong>. StemDeck renames the song’s folder on disk to match, but
+<p>To rename a song, right-click it in the song list (the library or a
+setlist) and choose <strong>Rename…</strong>. This renames the song you
+clicked without loading it, so a song that is playing keeps playing
+while you rename another. You can also select a song and choose
+<strong>Song → Rename Song…</strong>, which renames the selected song.
+Either way, StemDeck renames the song’s folder on disk to match, but
 keeps any BPM text that was already part of the folder name: renaming
 “Neon Moon (110)” to “Neon Moon Reprise” gives you “Neon Moon Reprise
 (110)”, not a folder that’s lost its tempo.</p>
@@ -902,6 +1010,12 @@ touching any files. And if the song’s folder happens to be on a drive
 that doesn’t support the Trash at all, StemDeck offers a <strong>Delete
 Permanently…</strong> fallback instead, clearly marked as
 unrecoverable.</p>
+<figure>
+<img src="screenshots/16-move-song-to-trash-confirm.png"
+alt="Figure 3.5: The Move Song to Trash confirmation." />
+<figcaption aria-hidden="true">Figure 3.5: The Move Song to Trash
+confirmation.</figcaption>
+</figure>
 <p>Removing a single stem from a song (right-click a stem card →
 <strong>Remove Stem</strong>) only takes it off that song; the audio
 file itself is not deleted.</p>
@@ -923,6 +1037,12 @@ before any change that touches a lot of songs at once, so an accidental
 bulk action is never the last word. You can also take one on purpose
 before a gig: <strong>File → Save Snapshot</strong>
 (<kbd>⇧</kbd><kbd>⌘</kbd><kbd>S</kbd>).</p>
+<figure>
+<img src="screenshots/17-settings-snapshots-tab.png"
+alt="Figure 3.6: Settings → Snapshots tab with a list of saved snapshots and the restore controls." />
+<figcaption aria-hidden="true">Figure 3.6: Settings → Snapshots tab with
+a list of saved snapshots and the restore controls.</figcaption>
+</figure>
 <p><strong>Settings → Snapshots</strong> lists them all, newest first,
 with a date and a short description of what each one covers. From
 here:</p>
@@ -1116,6 +1236,12 @@ keeps working from what it already loaded; your edits are held and
 written back once the folder is reachable again. You can also trigger
 the same check any time from <strong>Library → Reconnect
 Library</strong>.</p>
+<figure>
+<img src="screenshots/19-library-offline-caption.png"
+alt="Figure 3.8: The amber “Library offline: changes are kept” caption under the setlist header." />
+<figcaption aria-hidden="true">Figure 3.8: The amber “Library offline:
+changes are kept” caption under the setlist header.</figcaption>
+</figure>
 </section>
 <section id="housekeeping-commands" class="level1">
 <h1>Housekeeping commands</h1>
@@ -1159,6 +1285,12 @@ Finder and drop them anywhere on the stem row.</p>
 <p>StemDeck accepts WAV, AIFF, and MP3 files. Drop in as many as you
 like at once: a full multitrack session, a single replacement stem, or
 one new backing vocal.</p>
+<figure>
+<img src="screenshots/20-add-files-card.png"
+alt="Figure 4.1: The Add Files card at the end of the stem row." />
+<figcaption aria-hidden="true">Figure 4.1: The Add Files card at the end
+of the stem row.</figcaption>
+</figure>
 <p>When a stem lands, StemDeck does several things for you
 automatically:</p>
 <ul>
@@ -1208,6 +1340,12 @@ rules. <em>Full detail on manual outputs is in Part 7.</em></p>
 <p>Drag a card left or right in the row to reorder the stems. There is
 no separate “reorder” mode: just pick up the card and drop it where you
 want it.</p>
+<figure>
+<img src="screenshots/21-stem-card-closeup.png"
+alt="Figure 4.2: A single stem card, labeled top to bottom." />
+<figcaption aria-hidden="true">Figure 4.2: A single stem card, labeled
+top to bottom.</figcaption>
+</figure>
 <section id="right-click-menu" class="level2">
 <h2>Right-click menu</h2>
 <p>Right-click any stem card for its full set of actions:</p>
@@ -1237,6 +1375,12 @@ the current output in, the other hands it back to the rules.</li>
 song? The audio file on disk is not deleted.” before taking the stem out
 of the song.</li>
 </ul>
+<figure>
+<img src="screenshots/22-stem-context-menu.png"
+alt="Figure 4.3: The stem card right-click menu." />
+<figcaption aria-hidden="true">Figure 4.3: The stem card right-click
+menu.</figcaption>
+</figure>
 <div class="callout stage">
 <p><span class="callout-label">Stage Note</span> Removing a stem never
 deletes the audio file. If you remove the wrong one before a show, drag
@@ -1275,6 +1419,12 @@ undo a trim by clearing it, even weeks later.</p>
 button on the waveform toolbar, or <strong>Song → Align Beat
 Grid…</strong>. Steps 2 through 4 mark the beat grid and compute the
 song’s tempo.</p>
+<figure>
+<img src="screenshots/23-align-beat-grid-popover.png"
+alt="Figure 4.4: The Align Beat Grid popover, all four steps visible." />
+<figcaption aria-hidden="true">Figure 4.4: The Align Beat Grid popover,
+all four steps visible.</figcaption>
+</figure>
 <section id="step-2-downbeat-1" class="level2">
 <h2>Step 2: Downbeat 1</h2>
 <p>Downbeat 1 is the anchor for the entire beat grid: the waveform grid,
@@ -1308,6 +1458,12 @@ there: <strong>“≈ N measures”</strong> on success.</p>
 recompute, repeat.”</strong> instead, Downbeat 2 isn’t two measures
 after Downbeat 1 (or one of the marks is off the beat). Re-mark Downbeat
 2 exactly two measures after Downbeat 1 and try again.</p>
+<figure>
+<img src="screenshots/24-bpm-computed.png"
+alt="Figure 4.5: BPM computed, with the measure-count caption." />
+<figcaption aria-hidden="true">Figure 4.5: BPM computed, with the
+measure-count caption.</figcaption>
+</figure>
 </section>
 <section id="original-bpm-the-tempo-popover-and-tap-tempo"
 class="level2">
@@ -1337,6 +1493,12 @@ over a whole song.</p>
 the metronome button in the transport, or choose <strong>Song → Generate
 Click Track…</strong>. Set the <strong>BPM</strong> and <strong>Time
 sig</strong> fields first; the click generator needs both.</p>
+<figure>
+<img src="screenshots/25-tempo-time-signature-popover.png"
+alt="Figure 4.6: The Tempo &amp; Time Signature popover." />
+<figcaption aria-hidden="true">Figure 4.6: The Tempo &amp; Time
+Signature popover.</figcaption>
+</figure>
 <p>Under <strong>Click Track</strong>, <strong>Length</strong> sets how
 many measures of click to generate, in measures, defaulting to 32. Under
 <strong>Lead-In</strong>, <strong>Measures</strong> (0 to 8) sets how
@@ -1378,6 +1540,12 @@ waveform where you want silence. A red overlay marks the muted span.</p>
 stem. If you’re viewing the full mix, it applies to every stem except
 the click, count, and guide stems, so the band still hears its count-in
 even while the front-of-house mix goes quiet there.</p>
+<figure>
+<img src="screenshots/26-mute-region-painted.png"
+alt="Figure 4.7: A mute region painted on the waveform." />
+<figcaption aria-hidden="true">Figure 4.7: A mute region painted on the
+waveform.</figcaption>
+</figure>
 <p>To remove a region, right-click the waveform and use the <strong>Mute
 Regions</strong> section of the menu, which lists each region and lets
 you remove it individually or clear them all. You can also clear every
@@ -1396,12 +1564,24 @@ ruler across the top and one row per stem below it, all sharing the same
 time axis. Pan with a two-finger swipe, zoom by pinching or with the
 zoom buttons, and use <strong>Start</strong> or <strong>Fit</strong> to
 jump to the beginning or fit the whole song in view.</p>
+<figure>
+<img src="screenshots/27-timeline-editor-selection.png"
+alt="Figure 4.8: The Timeline Editor with a selection made on the source stem." />
+<figcaption aria-hidden="true">Figure 4.8: The Timeline Editor with a
+selection made on the source stem.</figcaption>
+</figure>
 <section id="downbeat-1-in-the-editor" class="level2">
 <h2>Downbeat 1 in the editor</h2>
 <p>Downbeat 1 is the same marker from the Align Beat Grid popover, just
 editable here too. Double-click the ruler to place it, drag the “1” chip
 to move it, or use the nudge buttons (−10 ms, −1 ms, +1 ms, +10 ms) for
 fine adjustment.</p>
+<figure>
+<img src="screenshots/29-timeline-downbeat-chip.png"
+alt="Figure 4.9: The Downbeat 1 chip on the Timeline Editor ruler." />
+<figcaption aria-hidden="true">Figure 4.9: The Downbeat 1 chip on the
+Timeline Editor ruler.</figcaption>
+</figure>
 </section>
 <section id="making-the-selection" class="level2">
 <h2>Making the selection</h2>
@@ -1425,6 +1605,12 @@ right and silence is inserted at the front to make space.</li>
 <li>If your selection is an exact fit for the space available, the panel
 says so: nothing shifts, the count-in slots in cleanly.</li>
 </ul>
+<figure>
+<img src="screenshots/28-timeline-copy-confirm.png"
+alt="Figure 4.10: The Copy Selection to Start confirmation panel." />
+<figcaption aria-hidden="true">Figure 4.10: The Copy Selection to Start
+confirmation panel.</figcaption>
+</figure>
 <p>Click <strong>Copy to Start</strong> to apply. New audio files are
 written into the song’s folder; the originals are left untouched on
 disk. The change takes effect the next time you play the song, not
@@ -1490,6 +1676,12 @@ beat and the measured beat grid described later in this chapter.</p>
 a caption across the top: pick a cue, then drag it onto the timeline to
 line it up by eye and ear. Build bakes one guide stem; the rest of the
 song’s stems are left alone.</p>
+<p>The window sizes itself to the screen it opens on. On a smaller
+display, the middle of the window (the header, transport, timeline, and
+inspector) scrolls up and down, while the action bar along the bottom,
+with <strong>Build</strong>, <strong>Cancel</strong>, and <strong>Clear
+Guide</strong>, stays pinned in view, so Build is never off the edge of
+the screen.</p>
 <p>At the top right, a <strong>SONG BPM</strong> readout shows the tempo
 the builder is working at, next to the zoom controls: <strong>Zoom
 In</strong>, <strong>Zoom Out</strong>, <strong>Start</strong> (jump to
@@ -1517,26 +1709,35 @@ the cue palette, preview transport, and timeline.</figcaption>
 </section>
 <section id="the-cue-palette" class="level1">
 <h1>The cue palette</h1>
-<p>The palette is organized in three rows, and every cue in it is real,
-prerecorded speech, either as a whole phrase or as single words
-assembled together. <strong>Whole phrases</strong> are complete
-recordings (“Chorus, two, three, four” said in one breath) stretched to
-match the song’s tempo, and are the ones you’ll reach for most.
-<strong>Single word cues</strong> (the violet row) are built by placing
-individual recorded words on their own beats, with silence in between,
-covering what whole phrases don’t: bare section names, short counts, and
-single beats.</p>
+<p>The palette is organized in three rows, and every cue in it is
+recorded speech in one consistent voice (the cue library’s revision 3),
+either as a whole phrase or as single words assembled together.
+<strong>Whole phrases</strong> are complete recordings (“Chorus, two,
+three, four” said in one breath) stretched to match the song’s tempo,
+and are the ones you’ll reach for most. <strong>Single word
+cues</strong> (the violet row) are built by placing individual recorded
+words on their own beats, with silence in between, covering what whole
+phrases don’t: bare section names, short counts, and single beats.</p>
 <p>The three rows:</p>
 <ol type="1">
 <li><strong>Amber, the most-used cues</strong>: Intro, Verse, Chorus,
 Solo, Bridge, Tag, Outro, End (hit), End (count).</li>
 <li><strong>Cyan, the rest of the whole phrases</strong>: 1 2 3 4, Drums
 In, Pre Chorus, Chorus Solo, Verse Breakdown, Breakdown, Chorus Outro,
-Pickup.</li>
+Pickup, and the phrases added in revision 3: Intro Breakdown, Breakdown
+Chorus, Chorus Breakdown, Breakdown Pre Chorus, Breakdown Bridge,
+Breakdown Verse, Build, Verse Build, Outro Solo, and Drums In 2 3
+4.</li>
 <li><strong>Violet, labeled SINGLE WORD CUES</strong>: the bare section
 names (Intro, Verse, Pre Chorus, Chorus, Chorus Solo, Solo, Bridge,
 Verse Breakdown, Breakdown, Chorus Outro, Tag, Outro), plus 1 2, 1 2 3,
-and single beats 1, 2, 3, and 4.</li>
+and single beats 1 through 8. Revision 3 adds <strong>Hold</strong>,
+<strong>Stop</strong>, <strong>Vamp</strong>,
+<strong>Interlude</strong>, <strong>Key Change</strong>, and <strong>A
+Cappella</strong> to this row. Key Change and A Cappella take two beats.
+Chorus Solo, Verse Breakdown, and Chorus Outro are also two beats here:
+the two words land on consecutive beats instead of being squeezed into
+one.</li>
 </ol>
 <p>Notice <strong>End</strong> is two separate cues, not one:
 <strong>End (hit)</strong> is a single stab for a song that ends on one
@@ -1565,6 +1766,12 @@ ms, and +10 ms buttons for fine placement.</li>
 <li><strong>Delete</strong> the selected cue with the trash button in
 the inspector.</li>
 </ul>
+<figure>
+<img src="screenshots/32-placed-cue-inspector.png"
+alt="Figure 5.3: A placed cue selected, with the inspector and Nudge buttons." />
+<figcaption aria-hidden="true">Figure 5.3: A placed cue selected, with
+the inspector and Nudge buttons.</figcaption>
+</figure>
 <p>With <strong>Snap to beat</strong> on, a placed or dragged cue locks
 to the nearest beat instead of sitting wherever you dropped it.</p>
 <div class="callout tip">
@@ -1607,6 +1814,12 @@ and what cues SNAP to. It never changes playback, tempo, or anything the
 audience or the band hears. It exists purely to make placing cues by eye
 more accurate.</p>
 </div>
+<figure>
+<img src="screenshots/33-beat-grid-from-stem.png"
+alt="Figure 5.4: The beat grid measured from a stem, with a coverage caption." />
+<figcaption aria-hidden="true">Figure 5.4: The beat grid measured from a
+stem, with a coverage caption.</figcaption>
+</figure>
 </section>
 <section id="build-and-re-build" class="level1">
 <h1>Build and re-Build</h1>
@@ -1625,17 +1838,49 @@ it if you change your mind. While a guide exists, a locked
 <strong>Existing guide</strong> reference lane sits in the timeline for
 comparison, and a <strong>Clear Guide</strong> button removes it
 entirely.</p>
+<figure>
+<img src="screenshots/34-guide-build-done.png"
+alt="Figure 5.5: The Guide Builder after a successful build." />
+<figcaption aria-hidden="true">Figure 5.5: The Guide Builder after a
+successful build.</figcaption>
+</figure>
 </section>
 <section id="cue-revisions" class="level1">
 <h1>Cue revisions</h1>
-<p>The cue recordings themselves occasionally get improved. Each song
-remembers which set it was built with, shown as <strong>Guide cues: rev
-N</strong>. If a newer set is available, an <strong>Upgrade to rev
-N</strong> button appears. Upgrading shifts your already-placed cues so
-they still land exactly where you originally heard them, using the newer
-recordings; click <strong>Build</strong> afterward to bake the upgrade.
-Until then, the song keeps sounding exactly as it always has, so a set
-you’ve already rehearsed to never changes without you asking for it.</p>
+<p>The cue recordings themselves get improved from time to time. Each
+song remembers which set it was built with, shown as <strong>Guide cues:
+rev N</strong>. The current set is <strong>rev3</strong>, a new library
+in which every cue shares one consistent voice and which adds the new
+cues listed under <em>The cue palette</em>. A song built on an older set
+keeps sounding exactly as it always has, so a guide you have already
+rehearsed to never changes unless you ask.</p>
+<p>When a newer set is available for the song, an <strong>Upgrade to
+rev3</strong> button appears next to the caption. Click it and StemDeck
+moves each placed cue so it is heard where you heard it before, even
+though the new recording starts its first syllable at a slightly
+different moment than the old one. It works that out from the recordings
+themselves, so the shift is exact for each cue rather than a rough
+nudge. When it finishes, a green line says <strong>Upgraded to rev3,
+cues shifted to stay where you hear them. Takes effect on the next
+Build.</strong> Beside it is a scrolling strip with each cue’s shift in
+milliseconds. Click <strong>Build</strong> afterward to bake the upgrade
+into a new guide stem.</p>
+<p>Sometimes StemDeck cannot place a cue, and it tells you in amber text
+in that strip rather than guessing:</p>
+<ul>
+<li><strong>“Cue: not in rev3”</strong> means the new library has no cue
+by that name. The cue stays where it is, and you will need to replace it
+by hand.</li>
+<li><strong>“Cue: shift unknown, not moved”</strong> means StemDeck
+could not measure that cue’s old or new recording. The cue stays where
+it is. Listen to it against the song before you Build.</li>
+</ul>
+<div class="callout stage">
+<p><span class="callout-label">Stage Note</span> Upgrading is never
+automatic. If a guide is working for your band, leave it on its current
+revision until you have time to upgrade, Build, and listen through the
+whole song.</p>
+</div>
 </section>
 <section id="checking-a-guide-against-its-cue-map" class="level1">
 <h1>Checking a guide against its cue map</h1>
@@ -1656,6 +1901,12 @@ a cue map, you’ll instead see a note that the map wasn’t saved, with a
 audio. Some guides can’t be analyzed at all, most commonly a guide
 recorded by hand rather than built from the cue library: <strong>This
 guide looks recorded, not built.</strong></p>
+<figure>
+<img src="screenshots/35-map-check-mismatch.png"
+alt="Figure 5.6: A cue map mismatch, with differences shown and the resolution buttons." />
+<figcaption aria-hidden="true">Figure 5.6: A cue map mismatch, with
+differences shown and the resolution buttons.</figcaption>
+</figure>
 </section>
 <section id="recording-your-own-cues" class="level1">
 <h1>Recording your own cues</h1>
@@ -1671,7 +1922,8 @@ current playhead.</li>
 <li>Press <strong>Rec</strong> again while recording and it punches out,
 splicing that take into the song’s guide stem.</li>
 </ul>
-<p>The gear icon next to <strong>Rec</strong> opens the <strong>Record
+<p>The sliders button in the transport row (right of the metronome
+button, left of <strong>LOOP</strong>) opens the <strong>Record
 Input</strong> popover: <strong>INPUT</strong>, <strong>CHANNEL</strong>
 (shown only when the device has more than one input),
 <strong>GAIN</strong>, and <strong>RECORDING OFFSET</strong>, a slider
@@ -1683,6 +1935,12 @@ doesn’t report on its own.</p>
 Ui24R? Its USB channel numbering is offset by 10, so console input N
 shows up in the CHANNEL picker as channel N+10.</p>
 </div>
+<figure>
+<img src="screenshots/36-record-input-popover.png"
+alt="Figure 5.7: The Record Input popover with input, channel, gain, and recording offset." />
+<figcaption aria-hidden="true">Figure 5.7: The Record Input popover with
+input, channel, gain, and recording offset.</figcaption>
+</figure>
 <div class="part-divider">
 <div class="part-eyebrow">
 <p>Part 6</p>
@@ -1698,6 +1956,12 @@ shows up in the CHANNEL picker as channel N+10.</p>
 controls you touch most on stage: <strong>Rewind</strong>,
 <strong>Play/Pause</strong>, <strong>Stop</strong>, and
 <strong>Rec</strong>, plus the seek bar and the big time display.</p>
+<figure>
+<img src="screenshots/40-transport-playing.png"
+alt="Figure 6.1: The transport bar during playback, with GO and LOOP to the right." />
+<figcaption aria-hidden="true">Figure 6.1: The transport bar during
+playback, with GO and LOOP to the right.</figcaption>
+</figure>
 <ul>
 <li><strong>Rewind</strong> (cyan) sends the playhead back to 0:00. If
 the song is already playing, playback keeps going from the top. If it’s
@@ -1760,6 +2024,12 @@ not Play. Play resumes from wherever the playhead happens to be, which
 can bite you if someone scrubbed the waveform during soundcheck. GO
 always starts clean, from the top.</p>
 </div>
+<figure>
+<img src="screenshots/41-go-loop-buttons.png"
+alt="Figure 6.2: The GO and LOOP buttons." />
+<figcaption aria-hidden="true">Figure 6.2: The GO and LOOP
+buttons.</figcaption>
+</figure>
 <p><strong>LOOP</strong> repeats a region of the song for as long as you
 leave it on. It’s built for two real jobs: vamping under a speech or an
 announcement, and stretching a solo section for the band. LOOP only
@@ -1779,6 +2049,12 @@ End</strong>.</li>
 <li>Flip the <strong>Loop</strong> switch, or click
 <strong>LOOP</strong> in the transport row, to arm it.</li>
 </ol>
+<figure>
+<img src="screenshots/42-vamp-toolbar-loop-armed.png"
+alt="Figure 6.3: The waveform toolbar with Set Start, Set End, the Loop switch, and a loop region armed." />
+<figcaption aria-hidden="true">Figure 6.3: The waveform toolbar with Set
+Start, Set End, the Loop switch, and a loop region armed.</figcaption>
+</figure>
 <p>While armed, LOOP is solid cyan and playback wraps from the end point
 back to the start point over and over. Click LOOP again, or press
 <kbd>Space</kbd>, to disarm it. <strong><kbd>Space</kbd> only disarms,
@@ -1802,6 +2078,12 @@ live.</p>
 one set. The sidebar dropdown at the top of the song list switches
 between <strong>Library</strong> (your whole collection) and any setlist
 you’ve created.</p>
+<figure>
+<img src="screenshots/43-setlist-dropdown.png"
+alt="Figure 6.4: The sidebar setlist dropdown, open, showing Library plus two setlists." />
+<figcaption aria-hidden="true">Figure 6.4: The sidebar setlist dropdown,
+open, showing Library plus two setlists.</figcaption>
+</figure>
 <p>The dropdown lists <strong>Library</strong> first, then each setlist
 by name, with a checkmark on whichever is active. Below that:
 <strong>New Setlist…</strong>, <strong>Rename…</strong>, and
@@ -1815,6 +2097,15 @@ you launch StemDeck.</p>
 submenu, which lists every setlist (grayed out if the song’s already in
 it). You can also right-click a song in the library and choose
 <strong>Add to Setlist</strong>.</p>
+</section>
+<section id="reordering-a-setlist" class="level2">
+<h2>Reordering a setlist</h2>
+<p>Drag a song row up or down within a setlist to change the running
+order. A line shows where the song will land when you let go, and
+dragging near the top or bottom edge of a long list scrolls it for you.
+Reordering only changes that setlist: the library and your other
+setlists are untouched. It works only inside an open setlist, not in the
+<strong>Library</strong> view.</p>
 <p>The <strong>Setlist</strong> menu also carries <strong>New
 Setlist…</strong>, <strong>Rename Setlist…</strong>, and <strong>Delete
 Setlist…</strong>, matching the sidebar dropdown, for whichever you have
@@ -1824,6 +2115,36 @@ open at the moment.</p>
 removes the list itself. Every song that was in it stays in your
 library, untouched.</p>
 </div>
+</section>
+<section id="renaming-a-song-from-the-list" class="level2">
+<h2>Renaming a song from the list</h2>
+<p>Right-click a song, in the library or in a setlist, and choose
+<strong>Rename…</strong>. The song you clicked is renamed without being
+loaded, so a song that is playing keeps playing. See <em>Part 3</em> for
+what a rename does to the folder.</p>
+<figure>
+<img src="screenshots/67-song-row-context-menu.png"
+alt="Figure 6.5: Right-clicking a song in the sidebar, with Rename… at the top of the menu." />
+<figcaption aria-hidden="true">Figure 6.5: Right-clicking a song in the
+sidebar, with Rename… at the top of the menu.</figcaption>
+</figure>
+</section>
+<section id="update-notices" class="level2">
+<h2>Update notices</h2>
+<p>StemDeck checks the Mac App Store for a newer version about ten
+seconds after launch, then at most once a day. When there is one, a cyan
+bar with an amber outline appears at the bottom of the window:
+<strong>StemDeck N is available (you have M)</strong>, with
+<strong>Update</strong>, <strong>Later</strong>, and <strong>Skip This
+Version</strong>. <strong>Update</strong> opens the App Store; StemDeck
+never downloads or installs anything itself. <strong>Later</strong>
+hides the bar until the next daily check, and <strong>Skip This
+Version</strong> hides it until a still newer version appears.</p>
+<p>The bar never appears while a song is playing, and it floats over the
+window instead of moving anything. To ask on demand, choose <strong>Help
+→ Check for Updates…</strong>, which always answers, even for a version
+you skipped. If you are playing, or a dialog is open, the item is greyed
+out.</p>
 </section>
 <section id="sidebar-width-and-narrow-windows" class="level2">
 <h2>Sidebar width and narrow windows</h2>
@@ -1841,6 +2162,12 @@ Songs has nothing to do and stays disabled.</p>
 <p>The PITCH and TEMPO pills sit in the top bar, next to the transport.
 Both apply to every stem in the song except click, count, and guide
 stems.</p>
+<figure>
+<img src="screenshots/44-pitch-tempo-pills.png"
+alt="Figure 6.6: The PITCH and TEMPO pills side by side." />
+<figcaption aria-hidden="true">Figure 6.6: The PITCH and TEMPO pills
+side by side.</figcaption>
+</figure>
 <p><strong>PITCH</strong> transposes the whole song up or down, in whole
 semitones, from −12 to +12. Click the + or − arrows to nudge it a
 semitone at a time, or double-click the value to reset it to 0.</p>
@@ -1867,6 +2194,12 @@ count the song in at the gig.</p>
 <p>Each stem gets its own channel strip in the mixer row, modeled on a
 live console’s input channel: a color tag, a name, an output control, a
 fader with a meter, and Mute/Solo.</p>
+<figure>
+<img src="screenshots/45-channel-strip-closeup.png"
+alt="Figure 6.7: A single channel strip, showing the fader, meter, OUT control, and Mute/Solo." />
+<figcaption aria-hidden="true">Figure 6.7: A single channel strip,
+showing the fader, meter, OUT control, and Mute/Solo.</figcaption>
+</figure>
 <section id="fader-law" class="level2">
 <h2>Fader law</h2>
 <p>The fader is marked at <strong>+12, +6, 0, −6, −12, −24,
@@ -1923,6 +2256,12 @@ moving stems around.</p>
 at once. It uses the same fader law as a channel strip: marks at
 +12/+6/0/−6/−12/−24/−48, unity at three-quarters up, <kbd>⌥</kbd>-drag
 for fine control, double-click to reset to unity.</p>
+<figure>
+<img src="screenshots/46-master-mute-all.png"
+alt="Figure 6.8: The MASTER strip with the MUTE ALL button and meter." />
+<figcaption aria-hidden="true">Figure 6.8: The MASTER strip with the
+MUTE ALL button and meter.</figcaption>
+</figure>
 <p>Instead of a small mute toggle, MASTER has a stage-sized <strong>MUTE
 ALL</strong> button that reads <strong>MUTED</strong> while it’s active,
 a deliberate kill switch you can hit without hunting for a tiny control.
@@ -1940,6 +2279,12 @@ pull it down if you truly need to kill everything from your laptop.</p>
 <h1>The waveform</h1>
 <p>The waveform above the transport shows the whole song at a glance,
 with the playhead, markers, and grid drawn on top of it.</p>
+<figure>
+<img src="screenshots/47-waveform-markers-grid.png"
+alt="Figure 6.9: The waveform with the amber downbeat markers and cyan playhead." />
+<figcaption aria-hidden="true">Figure 6.9: The waveform with the amber
+downbeat markers and cyan playhead.</figcaption>
+</figure>
 <ul>
 <li><strong>Click</strong> anywhere on the waveform to seek there.</li>
 <li><strong>Scroll or pinch</strong> to zoom in and out.</li>
@@ -2028,6 +2373,18 @@ to listen through the changes first. StemDeck takes a snapshot
 automatically before it applies anything, so you can always get back to
 where you started.</p>
 </div>
+<figure>
+<img src="screenshots/48-level-song-volumes-preview.png"
+alt="Figure 6.10: The Level Song Volumes preview table with one flagged row." />
+<figcaption aria-hidden="true">Figure 6.10: The Level Song Volumes
+preview table with one flagged row.</figcaption>
+</figure>
+<figure>
+<img src="screenshots/49-level-song-volumes-done.png"
+alt="Figure 6.11: The Level Song Volumes success screen after Apply." />
+<figcaption aria-hidden="true">Figure 6.11: The Level Song Volumes
+success screen after Apply.</figcaption>
+</figure>
 <div class="part-divider">
 <div class="part-eyebrow">
 <p>Part 7</p>
@@ -2089,6 +2446,12 @@ to stereo, OUT numbers and all.</p>
 the interface look and sound different even though nothing in the song
 changed. At home you’re hearing a stereo fold-down. On stage, on the
 interface, every stem goes exactly where its OUT number says.</p>
+<figure>
+<img src="screenshots/51-settings-audio-stereo.png"
+alt="Figure 7.2: Settings → Audio with System Default selected, showing the stereo status line." />
+<figcaption aria-hidden="true">Figure 7.2: Settings → Audio with System
+Default selected, showing the stereo status line.</figcaption>
+</figure>
 </section>
 <section id="how-a-stem-gets-its-output" class="level1">
 <h1>How a stem gets its output</h1>
@@ -2106,7 +2469,7 @@ name.</li>
 applies, with the stem flagged so you notice.</li>
 </ol>
 <p>The routing rules are what make dragging in a folder of stems mostly
-route itself. Out of the box, 1.6.2 ships with these defaults:</p>
+route itself. Out of the box, 1.7.0 ships with these defaults:</p>
 <p>Table 7.1 — Default output rules.</p>
 <table>
 <thead>
@@ -2187,6 +2550,12 @@ the stem and choose <strong>Use Routing Rule (OUT n)</strong>. To keep a
 routing-rule output exactly where it is (protect it from ever being
 re-derived, even if you edit the rules later), right-click and choose
 <strong>Keep OUT n as Manual</strong>.</p>
+<figure>
+<img src="screenshots/52-out-field-pinned.png"
+alt="Figure 7.3: A stem card with a manual output, filled amber pin." />
+<figcaption aria-hidden="true">Figure 7.3: A stem card with a manual
+output, filled amber pin.</figcaption>
+</figure>
 </section>
 <section id="the-assign-outputs-prompt" class="level1">
 <h1>The Assign Outputs prompt</h1>
@@ -2202,6 +2571,11 @@ click <strong>Not Now</strong> to leave it for later. Anything you leave
 blank stays on output 1, and StemDeck flags it: a warning triangle
 appears next to that song in the sidebar, and the stem’s OUT field tints
 amber.</p>
+<p>Hover the warning triangle to see why it is there. The tooltip reads
+“Warning: no routing rule matches, so these stems play on output 1,”
+followed by a list of the affected stems by name and file name, and then
+the fix: set each stem’s OUT number on its card, or add a pattern in
+<strong>Settings → Channels</strong>.</p>
 <p>You can come back to this later from <strong>Song → Assign
 Outputs…</strong>, which is enabled whenever the selected song has a
 flagged stem.</p>
@@ -2211,6 +2585,18 @@ lands on output 1, the click output. If that stem happens to be a lead
 vocal, your drummer’s in-ear click just turned into a vocal track. Clear
 every warning triangle before a show, not during one.</p>
 </div>
+<figure>
+<img src="screenshots/53-assign-outputs-prompt.png"
+alt="Figure 7.4: The Assign Outputs sheet with two unmatched stems." />
+<figcaption aria-hidden="true">Figure 7.4: The Assign Outputs sheet with
+two unmatched stems.</figcaption>
+</figure>
+<figure>
+<img src="screenshots/56-sidebar-routing-flag.png"
+alt="Figure 7.5: The sidebar showing a warning triangle on a song with a flagged stem." />
+<figcaption aria-hidden="true">Figure 7.5: The sidebar showing a warning
+triangle on a song with a flagged stem.</figcaption>
+</figure>
 </section>
 <section id="editing-the-routing-rules" class="level1">
 <h1>Editing the routing rules</h1>
@@ -2229,6 +2615,12 @@ Songs</strong> to re-run them against every stem already in your
 library. It never touches a manual output. Afterward it reports how many
 stems moved and how many stayed put, for example “14 stems re-routed, 3
 kept their manual output”.</p>
+<figure>
+<img src="screenshots/54-settings-channels-rules.png"
+alt="Figure 7.6: Settings → Channels with the default routing rules." />
+<figcaption aria-hidden="true">Figure 7.6: Settings → Channels with the
+default routing rules.</figcaption>
+</figure>
 </section>
 <section id="clearing-manual-outputs" class="level1">
 <h1>Clearing manual outputs</h1>
@@ -2244,6 +2636,12 @@ expected.</p>
 <p>Click <strong>Clear N Manual Output(s)</strong> to confirm, or
 <strong>Cancel</strong> to back out. Nothing happens until you click the
 confirm button.</p>
+<figure>
+<img src="screenshots/55-clear-manual-outputs-sheet.png"
+alt="Figure 7.7: The Clear Manual Outputs sheet with library-wide scope selected." />
+<figcaption aria-hidden="true">Figure 7.7: The Clear Manual Outputs
+sheet with library-wide scope selected.</figcaption>
+</figure>
 </section>
 <section id="behringer-x32-rack" class="level1">
 <h1>Behringer X32 RACK</h1>
@@ -2308,6 +2706,12 @@ Core MIDI as soon as it is plugged in, no drivers needed.</li>
 Once it is paired there, StemDeck sees it automatically.</li>
 <li>Open <strong>Settings → MIDI</strong>.</li>
 </ol>
+<figure>
+<img src="screenshots/57-settings-midi.png"
+alt="Figure 8.1: The Settings MIDI tab with a controller connected." />
+<figcaption aria-hidden="true">Figure 8.1: The Settings MIDI tab with a
+controller connected.</figcaption>
+</figure>
 <p>An iPad running a MIDI app can also reach StemDeck over Wi-Fi, using
 Core MIDI’s Network Session feature. Set that up in Audio MIDI Setup on
 the Mac and the MIDI app on the iPad; once the session is connected,
@@ -2426,6 +2830,12 @@ you leave it blank, StemDeck uses your Mac’s own name.</li>
 <li>The <strong>Port</strong> defaults to 8080. Leave it unless
 something else on your network already uses that port.</li>
 </ol>
+<figure>
+<img src="screenshots/58-settings-remote-running.png"
+alt="Figure 8.2: Settings → Remote with the server running." />
+<figcaption aria-hidden="true">Figure 8.2: Settings → Remote with the
+server running.</figcaption>
+</figure>
 <p>Once the server is running, a <strong>URL</strong> row appears with
 an <strong>Open</strong> button. That is the address to type into the
 phone or tablet’s browser, on the same Wi-Fi network as the Mac.</p>
@@ -2458,6 +2868,12 @@ the show. Show it to your own band, not the room.</p>
 Remote</strong>) shows the address and the PIN underneath the QR code.
 Type the address into the phone’s browser, tap through the security
 warning, and enter the PIN.</p>
+<figure>
+<img src="screenshots/59-phone-remote-login.png"
+alt="Figure 8.3: The remote login screen on a phone." />
+<figcaption aria-hidden="true">Figure 8.3: The remote login screen on a
+phone.</figcaption>
+</figure>
 <p>Once a device is signed in, it stays signed in on that phone or
 tablet for 24 hours, so nobody has to re-enter the PIN at every
 soundcheck. Enter the wrong PIN a few times in a row and that device
@@ -2471,6 +2887,18 @@ transport: the current and next-up song, a <strong>GO</strong> button, a
 <strong>LOOP</strong> switch, and a <strong>Stop</strong> button. A
 separate screen lets you open a setlist and tap a different song to load
 it.</p>
+<figure>
+<img src="screenshots/60-phone-remote-transport.png"
+alt="Figure 8.4: The remote’s transport screen." />
+<figcaption aria-hidden="true">Figure 8.4: The remote’s transport
+screen.</figcaption>
+</figure>
+<figure>
+<img src="screenshots/61-phone-remote-setlist.png"
+alt="Figure 8.5: Picking a setlist and song from the remote." />
+<figcaption aria-hidden="true">Figure 8.5: Picking a setlist and song
+from the remote.</figcaption>
+</figure>
 <div class="callout warn">
 <p><span class="callout-label">Warning</span> The remote’s
 <strong>Stop</strong> is a real stop, the same as the Stop button on the
@@ -2529,6 +2957,12 @@ there.</p>
 subtitle is a plain description of what you are about to get: a render
 of the song as you’d hear it on stage, with faders, mute, solo, pitch,
 tempo, and the click lead-in all honored.</p>
+<figure>
+<img src="screenshots/62-export-mix-sheet.png"
+alt="Figure 9.1: The Export Mix sheet." />
+<figcaption aria-hidden="true">Figure 9.1: The Export Mix
+sheet.</figcaption>
+</figure>
 <p>The sheet has two choices to make:</p>
 <ul>
 <li><strong>Format.</strong> Either <strong>WAV (24-bit,
@@ -2546,6 +2980,12 @@ begin with.</li>
 <p>Click <strong>Choose Location &amp; Export…</strong>, pick a folder
 in the save panel, and StemDeck starts rendering. A progress readout
 tracks the render as it happens.</p>
+<figure>
+<img src="screenshots/63-export-mix-progress.png"
+alt="Figure 9.2: A finished export, with Reveal in Finder." />
+<figcaption aria-hidden="true">Figure 9.2: A finished export, with
+Reveal in Finder.</figcaption>
+</figure>
 <p>When it finishes, click <strong>Reveal in Finder</strong> to jump
 straight to the file.</p>
 </section>
@@ -2748,6 +3188,13 @@ browser.</p></li>
 <li><p><strong>Show Welcome Tour</strong>
 <kbd>⇧</kbd><kbd>⌘</kbd><kbd>?</kbd>: replays the seven-step onboarding
 tour.</p></li>
+<li><p><strong>Join the StemDeck Mailing List…</strong>: opens the
+mailing list signup form (tips, beta builds, a vote on what gets built
+next). Optional; see <em>Joining the mailing list</em> in Part
+1.</p></li>
+<li><p><strong>Check for Updates…</strong>: asks the Mac App Store
+whether a newer StemDeck is out and tells you the answer. Greyed out
+while a song is playing or a dialog is open.</p></li>
 <li><p><strong>Contact Support…</strong>: opens a pre-addressed email to
 support@edipkoinc.com.</p></li>
 <li><p><strong>StemDeck Website</strong>: opens
@@ -2759,11 +3206,17 @@ subscription are greyed out while StemDeck is unsubscribed or a grace
 period has run out. If most of the Transport and Song menus are grey,
 check <strong>Settings → Account</strong> first.</p>
 </div>
+<figure>
+<img src="screenshots/65-menu-bar-song-menu.png"
+alt="Figure 10.1: The Song menu, showing Align Beat Grid and Guide Builder." />
+<figcaption aria-hidden="true">Figure 10.1: The Song menu, showing Align
+Beat Grid and Guide Builder.</figcaption>
+</figure>
 </section>
 </section>
 <section id="keyboard-and-mouse-shortcuts" class="level1">
 <h1>Keyboard and mouse shortcuts</h1>
-<p>Table 10.1 — Keyboard shortcuts in StemDeck 1.6.2.</p>
+<p>Table 10.1 — Keyboard shortcuts in StemDeck 1.7.0.</p>
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -2934,6 +3387,12 @@ account”</em> below.</p>
 <p>A list by date with a <strong>Restore…</strong> button each, empty
 state “No snapshots yet.”, and <strong>Take Snapshot Now</strong>,
 <strong>Refresh</strong>, <strong>Show in Finder</strong>.</p>
+<figure>
+<img src="screenshots/66-settings-account.png"
+alt="Figure 10.2: Settings, Account tab, showing an active StemDeck Pro subscription." />
+<figcaption aria-hidden="true">Figure 10.2: Settings, Account tab,
+showing an active StemDeck Pro subscription.</figcaption>
+</figure>
 </section>
 </section>
 <section id="where-stemdeck-keeps-things" class="level1">
@@ -3288,9 +3747,10 @@ on the next play from the top. Press <strong>Stop</strong>, then
 <p>If the song’s BPM changed since the guide was built, open
 <strong>Song → Guide Builder…</strong> and Build again. If the Builder
 offers <strong>Upgrade to rev N</strong>, the cue library has improved;
-upgrading shifts your cues so they still land where you placed them,
-then Build. Use <strong>Check Guide Against Cue Map</strong> if you are
-not sure the built file matches the cues you see.</p>
+upgrading shifts your cues so they still land where you placed them (any
+cue it cannot place is flagged in amber and left where it was), then
+Build. Use <strong>Check Guide Against Cue Map</strong> if you are not
+sure the built file matches the cues you see.</p>
 </section>
 <section id="the-phone-remote-will-not-connect" class="level2">
 <h2>The phone remote will not connect</h2>
@@ -3335,6 +3795,8 @@ first), or make sure the drive is mounted before launch.</p>
 <ul>
 <li><strong>Help → StemDeck User Guide</strong> opens the latest version
 of this guide.</li>
+<li><strong>Help → Check for Updates…</strong> tells you whether a newer
+StemDeck is on the Mac App Store.</li>
 <li><strong>Help → Contact Support…</strong> starts an email to
 support@edipkoinc.com. Include your StemDeck version (StemDeck → About
 StemDeck), your Mac and macOS version, the audio interface, and what you
@@ -3454,6 +3916,18 @@ Inter.</p>
 </section>
 <section id="version-history" class="level1 chapter-opener">
 <h1 class="chapter-opener">Version history</h1>
+<p><strong>1.8.0.</strong> An optional StemDeck mailing list: a one-time
+invitation after the Welcome Tour and Help → Join the StemDeck Mailing
+List…, with email confirmation and one-click unsubscribe. A fix for a
+prompt that could vanish when it was queued behind another one.</p>
+<p><strong>1.7.0.</strong> A new guide cue library, revision 3, with
+every cue in one voice and new cues (counts 5 to 8, Hold, Stop, Vamp,
+Interlude, Key Change, A Cappella, and a set of new breakdown and build
+phrases). Upgrade a song’s guide to it and each cue keeps its place. A
+Guide Builder that fits smaller screens. Drag to reorder songs in a
+setlist. Rename from the song list’s right-click menu. A warning
+triangle you can hover to see which stems are unrouted. An update notice
+and Help → Check for Updates….</p>
 <p><strong>1.6.2.</strong> A four-segment fader law with taller faders
 on screen, Option-drag for fine control, double-click to snap back to
 unity. A proper About panel. A Help menu with a direct link to this

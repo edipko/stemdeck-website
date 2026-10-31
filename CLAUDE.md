@@ -2,21 +2,15 @@
 
 Static marketing site for the StemDeck44 Mac app: plain HTML plus Tailwind from the CDN, no build step. The app itself lives in `../STEMDECK` (its own `CLAUDE.md` and `stemdeck-*` skills cover the app, the App Store and releases).
 
-## Read first: open items (2026-10-25)
+## Read first: open items (updated 2026-10-30)
+
+Done 2026-10-30: the search-indexing fixes were merged and deployed with the 1.8.0 site update (PR #1), and robots.txt, sitemap.xml and real 404s were verified live.
 
 Written by the StemDeck app session after a "why doesn't StemDeck show up in search" investigation. Delete each item once it is done.
 
-1. **Branch `fix/search-indexing` is committed but NOT deployed and NOT pushed.** It adds `public/robots.txt` and `public/sitemap.xml`, schema.org structured data (`WebSite` plus `SoftwareApplication`, name StemDeck44, alternate names StemDeck and StemDeck 44), the Apple Smart App Banner meta tag, a working App Store link on the bottom CTA button (it was `href="#"`), and a real `404.html` in place of the catch-all rewrite. Merge to `main`, deploy, then verify:
+1. **The bare domain `stemdeck44.com` does not resolve.** Cloudflare has records only for `www` (CNAME to `stemdeck-site.web.app`) and `dip-n-dale`. An attempt on 2026-10-30 was stopped by the Claude Code safety check pending the owner's explicit OK. Fix: a proxied apex record (placeholder `192.0.2.1`) plus a 301 to `https://www.stemdeck44.com/$1` (Cloudflare redirect or Page Rule), or add the apex as a redirect domain in Firebase Hosting. Needs the user's OK; it is public DNS.
 
-   ```sh
-   curl -s https://www.stemdeck44.com/robots.txt      # plain text, not HTML
-   curl -s https://www.stemdeck44.com/sitemap.xml     # XML
-   curl -s -o /dev/null -w '%{http_code}\n' https://www.stemdeck44.com/nope   # 404
-   ```
-
-2. **The bare domain `stemdeck44.com` does not resolve.** Cloudflare has records only for `www` (CNAME to `stemdeck-site.web.app`) and `dip-n-dale`. Fix: a proxied apex record plus a 301 to `https://www.stemdeck44.com/$1` (Cloudflare redirect or Page Rule), or add the apex as a redirect domain in Firebase Hosting. Needs the user's OK; it is public DNS.
-
-3. **Google Search Console and Bing Webmaster Tools are not set up.** The user signs in; verification is a DNS TXT record on the Cloudflare zone. Submit `https://www.stemdeck44.com/sitemap.xml` in both. Before this, a web search for "stemdeck44.com" returned nothing from this site.
+2. **Google Search Console and Bing Webmaster Tools are not set up.** The user signs in; verification is a DNS TXT record on the Cloudflare zone. Submit `https://www.stemdeck44.com/sitemap.xml` in both. Before this, a web search for "stemdeck44.com" returned nothing from this site.
 
 ## Why each fix matters
 

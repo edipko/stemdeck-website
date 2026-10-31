@@ -4,13 +4,11 @@ Static marketing site for the StemDeck44 Mac app: plain HTML plus Tailwind from 
 
 ## Read first: open items (updated 2026-10-30)
 
-Done 2026-10-30: the search-indexing fixes were merged and deployed with the 1.8.0 site update (PR #1), and robots.txt, sitemap.xml and real 404s were verified live.
+Done 2026-10-30: the search-indexing fixes were merged and deployed with the 1.8.0 site update (PR #1), and robots.txt, sitemap.xml and real 404s were verified live. Also done 2026-10-30 (user-approved): the bare domain `stemdeck44.com` 301s to `https://www.stemdeck44.com/$1` via a proxied placeholder A record `192.0.2.1` plus a Cloudflare Page Rule. Leave the apex MX/SPF records alone; they belong to Email Routing for hello@stemdeck44.com.
 
 Written by the StemDeck app session after a "why doesn't StemDeck show up in search" investigation. Delete each item once it is done.
 
-1. **The bare domain `stemdeck44.com` does not resolve.** Cloudflare has records only for `www` (CNAME to `stemdeck-site.web.app`) and `dip-n-dale`. An attempt on 2026-10-30 was stopped by the Claude Code safety check pending the owner's explicit OK. Fix: a proxied apex record (placeholder `192.0.2.1`) plus a 301 to `https://www.stemdeck44.com/$1` (Cloudflare redirect or Page Rule), or add the apex as a redirect domain in Firebase Hosting. Needs the user's OK; it is public DNS.
-
-2. **Google Search Console and Bing Webmaster Tools are not set up.** The user signs in; verification is a DNS TXT record on the Cloudflare zone. Submit `https://www.stemdeck44.com/sitemap.xml` in both. Before this, a web search for "stemdeck44.com" returned nothing from this site.
+1. **Google Search Console and Bing Webmaster Tools are not set up.** The user signs in; verification is a DNS TXT record on the Cloudflare zone. Submit `https://www.stemdeck44.com/sitemap.xml` in both. Before this, a web search for "stemdeck44.com" returned nothing from this site.
 
 ## Why each fix matters
 

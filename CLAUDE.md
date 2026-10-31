@@ -4,11 +4,9 @@ Static marketing site for the StemDeck44 Mac app: plain HTML plus Tailwind from 
 
 ## Read first: open items (updated 2026-10-30)
 
-Done 2026-10-30: the search-indexing fixes were merged and deployed with the 1.8.0 site update (PR #1), and robots.txt, sitemap.xml and real 404s were verified live. Also done 2026-10-30 (user-approved): the bare domain `stemdeck44.com` 301s to `https://www.stemdeck44.com/$1` via a proxied placeholder A record `192.0.2.1` plus a Cloudflare Page Rule. Leave the apex MX/SPF records alone; they belong to Email Routing for hello@stemdeck44.com.
+Done 2026-10-30: the search-indexing fixes were merged and deployed with the 1.8.0 site update (PR #1), and robots.txt, sitemap.xml and real 404s were verified live. Also done 2026-10-30 (user-approved): the bare domain `stemdeck44.com` 301s to `https://www.stemdeck44.com/$1` via a proxied placeholder A record `192.0.2.1` plus a Cloudflare Page Rule. Leave the apex MX/SPF records alone; they belong to Email Routing for hello@stemdeck44.com. Done 2026-10-31: Google Search Console (domain property, verified by the `google-site-verification` TXT at the apex; keep that record) and Bing Webmaster Tools, sitemap submitted. No open items remain.
 
 Written by the StemDeck app session after a "why doesn't StemDeck show up in search" investigation. Delete each item once it is done.
-
-1. **Google Search Console and Bing Webmaster Tools are not set up.** The user signs in; verification is a DNS TXT record on the Cloudflare zone. Submit `https://www.stemdeck44.com/sitemap.xml` in both. Before this, a web search for "stemdeck44.com" returned nothing from this site.
 
 ## Why each fix matters
 
